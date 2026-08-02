@@ -82,8 +82,15 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
 
     if "poster_url" not in df.columns:
         df["poster_url"] = ""
+    else:
+        df["poster_url"] = df["poster_url"].fillna("").astype(str).str.strip()
+        df.loc[df["poster_url"].str.lower().isin(["nan", "none", "null"]), "poster_url"] = ""
+
     if "backdrop_url" not in df.columns:
         df["backdrop_url"] = ""
+    else:
+        df["backdrop_url"] = df["backdrop_url"].fillna("").astype(str).str.strip()
+        df.loc[df["backdrop_url"].str.lower().isin(["nan", "none", "null"]), "backdrop_url"] = ""
 
     return df
 
@@ -190,10 +197,10 @@ class NetflixRecommender:
 
         return None
 
-    def get_recommendations(self, movie_name: str, top_n: int = 10, lang_filter: str = "All", search_history: list = None):
+    def get_recommendations(self, movie_name: str, top_n: int = 10, lang_filter: str = "All", genre_filter: str = "All", search_history: list = None):
         """
         Compute top N recommended movies using sparse dot-product similarity,
-        weighted metadata scoring, language priority/filtering, and user history preference.
+        weighted metadata scoring, language priority/filtering, genre filtering, and user history preference.
         """
         target_idx = self.find_movie_idx(movie_name)
         if target_idx is None:
@@ -227,6 +234,7 @@ class NetflixRecommender:
         top_candidates = top_candidates[np.argsort(-sim_scores_sparse[top_candidates])]
 
         filter_lang_clean = lang_filter.strip().lower() if lang_filter else "all"
+        filter_genre_clean = genre_filter.strip().lower() if genre_filter else "all"
 
         scored_candidates = []
 
@@ -236,9 +244,12 @@ class NetflixRecommender:
 
             row = self.df.iloc[idx]
             cand_lang = str(row.get("language", "English")).lower()
+            cand_genres = str(row.get("genres", "")).lower()
 
-            # Strict filter if a language filter is explicitly chosen (and not "all")
+            # Strict filters if language or genre explicitly chosen
             if filter_lang_clean != "all" and filter_lang_clean != cand_lang:
+                continue
+            if filter_genre_clean != "all" and filter_genre_clean not in cand_genres:
                 continue
 
             raw_tfidf_sim = float(sim_scores_sparse[idx])
@@ -262,6 +273,10 @@ class NetflixRecommender:
                         history_bonus += 0.08
                         break
 
+            # Real movie bonus (prioritize genuine titles over synthetic catalog IDs)
+            cand_title = str(row.get("title", ""))
+            real_movie_bonus = 0.20 if not re.search(r'\b\d{4,5}$', cand_title) else 0.0
+
             # Weighted score computation
             weighted_score = (
                 0.35 * raw_tfidf_sim +
@@ -270,13 +285,11 @@ class NetflixRecommender:
                 0.10 * (1.0 if cand_lang == q_lang else 0.0) +
                 0.05 * rating_score +
                 0.05 * pop_score +
-                history_bonus
+                history_bonus +
+                real_movie_bonus
             )
 
             # Language Priority Tier
-            # Tier 1: Matching specified filter language or query language
-            # Tier 2: Indian regional matching if query is Indian
-            # Tier 3: Global cinema
             priority_tier = 3
             if filter_lang_clean != "all":
                 priority_tier = 1 if cand_lang == filter_lang_clean else 2
@@ -317,7 +330,24 @@ class NetflixRecommender:
 
         return results, query_movie
 
-    def get_featured_hero_movie(self, lang_filter: str = "All") -> dict:
+    def _filter_df(self, lang_filter: str = "All", genre_filter: str = "All", real_only: bool = True) -> pd.DataFrame:
+        """Filter dataset by language and/or genre, excluding synthetic titles for high poster quality."""
+        f_lang = lang_filter.strip().lower() if lang_filter else "all"
+        f_genre = genre_filter.strip().lower() if genre_filter else "all"
+
+        subset = self.df
+        if real_only and "title" in subset.columns:
+            real_subset = subset[~subset["title"].str.contains(r'\b\d{4,5}$', regex=True, na=False)]
+            if len(real_subset) >= 15:
+                subset = real_subset
+
+        if f_lang != "all":
+            subset = subset[subset["language"].str.lower() == f_lang]
+        if f_genre != "all":
+            subset = subset[subset["genres"].str.lower().str.contains(re.escape(f_genre), na=False)]
+        return subset
+
+    def get_featured_hero_movie(self, lang_filter: str = "All", genre_filter: str = "All") -> dict:
         """Get a blockbuster movie to feature in the Hero Banner (randomized per load)."""
         hero_blockbusters = [
             "Vikram", "RRR", "Manjummel Boys", "K.G.F: Chapter 2", "12th Fail",
@@ -327,6 +357,7 @@ class NetflixRecommender:
         ]
 
         f_lang = lang_filter.strip().lower() if lang_filter else "all"
+        f_genre = genre_filter.strip().lower() if genre_filter else "all"
 
         candidates = []
         for name in hero_blockbusters:
@@ -334,12 +365,12 @@ class NetflixRecommender:
             if idx is not None:
                 row = self.df.iloc[idx]
                 c_lang = str(row.get("language", "English")).lower()
-                if f_lang == "all" or f_lang == c_lang:
+                c_genre = str(row.get("genres", "")).lower()
+                if (f_lang == "all" or f_lang == c_lang) and (f_genre == "all" or f_genre in c_genre):
                     candidates.append(self._row_to_dict(row))
 
         if not candidates:
-            # Fallback to top rating movie matching language
-            subset = self.df if f_lang == "all" else self.df[self.df["language"].str.lower() == f_lang]
+            subset = self._filter_df(lang_filter, genre_filter)
             if subset.empty:
                 subset = self.df
             top_row = subset.sample(1).iloc[0]
@@ -347,16 +378,16 @@ class NetflixRecommender:
 
         return random.choice(candidates)
 
-    def get_trending_movies(self, lang_filter: str = "All", n: int = 15) -> list:
-        """Return dynamic, fresh Trending Movies list randomized on each call."""
-        f_lang = lang_filter.strip().lower() if lang_filter else "all"
-        subset = self.df if f_lang == "all" else self.df[self.df["language"].str.lower() == f_lang]
+    def get_trending_movies(self, lang_filter: str = "All", genre_filter: str = "All", n: int = 15) -> list:
+        """Return dynamic, fresh Trending Movies list prioritizing popular real titles."""
+        subset = self._filter_df(lang_filter, genre_filter)
 
         if len(subset) < n:
             subset = self.df
 
-        # High rating/vote count subset for trending
-        popular_subset = subset[(subset["rating_val"] >= 7.0) | (subset["vote_count_val"] >= 5000)]
+        popular_subset = subset[subset["vote_count_val"] >= 5000]
+        if len(popular_subset) < n:
+            popular_subset = subset[subset["vote_count_val"] >= 1000]
         if len(popular_subset) < n:
             popular_subset = subset
 
@@ -365,34 +396,33 @@ class NetflixRecommender:
         random.shuffle(results)
         return results[:n]
 
-    def get_popular_movies(self, lang_filter: str = "All", n: int = 15) -> list:
-        """Return Top-Rated Popular Movies list sampled dynamically."""
-        f_lang = lang_filter.strip().lower() if lang_filter else "all"
-        subset = self.df if f_lang == "all" else self.df[self.df["language"].str.lower() == f_lang]
+    def get_popular_movies(self, lang_filter: str = "All", genre_filter: str = "All", n: int = 15) -> list:
+        """Return Top-Rated Popular Movies list sampled dynamically from top blockbusters."""
+        subset = self._filter_df(lang_filter, genre_filter)
 
         if len(subset) < n:
             subset = self.df
 
-        top_subset = subset.sort_values(by=["rating_val", "vote_count_val"], ascending=[False, False]).head(200)
+        top_subset = subset.sort_values(by=["vote_count_val", "rating_val"], ascending=[False, False]).head(150)
+        if len(top_subset) < n:
+            top_subset = subset
+
         sampled_rows = top_subset.sample(n=min(n, len(top_subset)))
         results = [self._row_to_dict(r) for _, r in sampled_rows.iterrows()]
         return results
 
-    def get_personalized_recommendations(self, search_history: list = None, lang_filter: str = "All", n: int = 15) -> list:
+    def get_personalized_recommendations(self, search_history: list = None, lang_filter: str = "All", genre_filter: str = "All", n: int = 15) -> list:
         """
-        Build personalized recommendations for the homepage based on user search history
-        and selected language filter.
+        Build personalized recommendations for the homepage based on user search history,
+        selected language filter, and selected genre filter.
         """
-        f_lang = lang_filter.strip().lower() if lang_filter else "all"
-
         if search_history and len(search_history) > 0:
             last_searched = search_history[-1]
-            recs, _ = self.get_recommendations(last_searched, top_n=n, lang_filter=lang_filter, search_history=search_history)
+            recs, _ = self.get_recommendations(last_searched, top_n=n, lang_filter=lang_filter, genre_filter=genre_filter, search_history=search_history)
             if recs and len(recs) >= 5:
                 return recs
 
-        # Default personalized pool if no history
-        return self.get_trending_movies(lang_filter=lang_filter, n=n)
+        return self.get_trending_movies(lang_filter=lang_filter, genre_filter=genre_filter, n=n)
 
 
 if __name__ == "__main__":

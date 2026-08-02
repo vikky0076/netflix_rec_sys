@@ -66,10 +66,11 @@ def save_cache():
     """Save poster cache dict to local disk file dataset/poster_cache.json."""
     try:
         os.makedirs(os.path.dirname(POSTER_CACHE_FILE), exist_ok=True)
+        cache_copy = dict(POSTER_CACHE)
         with open(POSTER_CACHE_FILE, "w", encoding="utf-8") as f:
-            json.dump(POSTER_CACHE, f, ensure_ascii=False, indent=2)
-    except Exception as e:
-        print(f"[WARNING] Could not save poster_cache.json: {e}")
+            json.dump(cache_copy, f, ensure_ascii=False, indent=2)
+    except Exception:
+        pass
 
 
 load_cache()
@@ -113,20 +114,29 @@ def fetch_tmdb_details(title: str, year: int = None) -> dict:
     """
     if not title:
         return {"poster_url": generate_svg_placeholder("Movie"), "backdrop_url": ""}
-
     clean_t = title.strip()
     cache_key = f"{clean_t.lower()}_{year if year else ''}"
 
-    # Step 1: Check local disk cache
-    if cache_key in POSTER_CACHE and POSTER_CACHE[cache_key]:
-        val = POSTER_CACHE[cache_key]
-        if isinstance(val, dict):
-            return val
-        elif isinstance(val, str) and val.startswith("http"):
-            return {"poster_url": val, "backdrop_url": ""}
-
     tmdb_key = parse_api_key(os.getenv("TMDB_API_KEY", ""), "api_key")
     omdb_key = parse_api_key(os.getenv("OMDB_API_KEY", ""), "apikey")
+
+    # Step 1: Check local disk cache (only return if poster_url is a real image URL, not SVG or mock broken URL)
+    if cache_key in POSTER_CACHE and POSTER_CACHE[cache_key]:
+        val = POSTER_CACHE[cache_key]
+        cached_poster = ""
+        if isinstance(val, dict):
+            cached_poster = val.get("poster_url", "")
+        elif isinstance(val, str):
+            cached_poster = val
+
+        is_svg = cached_poster.startswith("data:image/svg+xml")
+        is_dummy_mock = any(cached_poster.endswith(x) for x in ["pushpa.jpg", "pushpa2.jpg", "manjummel.jpg", "premalu.jpg", "aavesham.jpg", "kgf1.jpg", "kgf2.jpg", "kantara.jpg", "dangal.jpg", "3idiots.jpg", "12thfail.jpg", "baahubali.jpg"])
+
+        if cached_poster and cached_poster.startswith("http") and not is_svg and not is_dummy_mock:
+            if isinstance(val, dict):
+                return val
+            else:
+                return {"poster_url": cached_poster, "backdrop_url": ""}
 
     fetched_poster = None
     fetched_backdrop = ""
@@ -140,12 +150,22 @@ def fetch_tmdb_details(title: str, year: int = None) -> dict:
             if year and int(year) > 1900:
                 params["year"] = int(year)
 
-            resp = requests.get(f"{TMDB_BASE}/search/movie", params=params, timeout=3.5)
+            resp = requests.get(f"{TMDB_BASE}/search/movie", params=params, timeout=2.5)
             results = resp.json().get("results", [])
 
             if not results:
-                resp = requests.get(f"{TMDB_BASE}/search/tv", params=params, timeout=3.5)
+                resp = requests.get(f"{TMDB_BASE}/search/tv", params=params, timeout=2.5)
                 results = resp.json().get("results", [])
+
+            # Fallback with sanitized title (stripping parenthetical year / subtitle)
+            if not results:
+                clean_query = re.sub(r'\s*\(\d{4}\)', '', clean_t).split(':')[0].strip()
+                if clean_query and clean_query != clean_t:
+                    resp = requests.get(f"{TMDB_BASE}/search/movie", params={"api_key": tmdb_key, "query": clean_query}, timeout=2.5)
+                    results = resp.json().get("results", [])
+                    if not results:
+                        resp = requests.get(f"{TMDB_BASE}/search/tv", params={"api_key": tmdb_key, "query": clean_query}, timeout=2.5)
+                        results = resp.json().get("results", [])
 
             if results:
                 match = results[0]

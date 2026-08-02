@@ -131,14 +131,38 @@ def fetch_poster(title: str, year: int = None) -> str:
     return fetch_tmdb_poster_url(title, year)
 
 
+from concurrent.futures import ThreadPoolExecutor
+
+def get_movie_poster(m: dict) -> str:
+    """Get valid poster URL, fetching from TMDB/OMDb API if missing or 'nan'."""
+    if not m:
+        return ""
+    raw_p = str(m.get("poster_url") or "").strip()
+    if raw_p and raw_p.lower() not in ["nan", "none", "null"] and raw_p.startswith("http"):
+        return raw_p
+    p_url = fetch_poster(m.get("title"), m.get("release_year"))
+    m["poster_url"] = p_url
+    return p_url
+
 def hydrate_posters(movie_list: list) -> list:
-    """Ensure every movie dict in a list has a valid poster URL populated."""
+    """Ensure every movie dict in a list has a valid poster URL populated in parallel."""
+    if not movie_list:
+        return movie_list
+
+    # Identify movies needing poster fetch
+    to_fetch = [m for m in movie_list if not (str(m.get("poster_url") or "").strip().startswith("http"))]
+
+    if to_fetch:
+        with ThreadPoolExecutor(max_workers=min(20, len(to_fetch))) as executor:
+            fetched_urls = list(executor.map(get_movie_poster, to_fetch))
+            for m, p_url in zip(to_fetch, fetched_urls):
+                m["poster"] = p_url
+                m["poster_url"] = p_url
+
     for m in movie_list:
-        raw_p = m.get("poster_url", "").strip()
-        if raw_p:
-            m["poster"] = raw_p
-        else:
-            m["poster"] = fetch_poster(m.get("title"), m.get("release_year"))
+        if "poster" not in m or not m["poster"]:
+            m["poster"] = get_movie_poster(m)
+
     return movie_list
 
 
@@ -166,20 +190,21 @@ def add_user_history(movie_title: str):
 
 @app.route("/")
 def index():
-    """Homepage: Dynamic streaming interface with language filters and dynamic sections."""
+    """Homepage: Dynamic streaming interface with language and genre filters."""
     lang_filter = request.args.get("lang", "All").strip()
+    genre_filter = request.args.get("genre", "All").strip()
     history = get_user_history()
 
     if recommender is None:
-        return render_template("index.html", hero=None, recommended=[], trending=[], popular=[], selected_lang=lang_filter, history=history)
+        return render_template("index.html", hero=None, recommended=[], trending=[], popular=[], selected_lang=lang_filter, selected_genre=genre_filter, history=history)
 
-    hero_movie  = recommender.get_featured_hero_movie(lang_filter)
-    recommended = recommender.get_personalized_recommendations(history, lang_filter, n=12)
-    trending    = recommender.get_trending_movies(lang_filter, n=12)
-    popular     = recommender.get_popular_movies(lang_filter, n=12)
+    hero_movie  = recommender.get_featured_hero_movie(lang_filter=lang_filter, genre_filter=genre_filter)
+    recommended = recommender.get_personalized_recommendations(history, lang_filter=lang_filter, genre_filter=genre_filter, n=12)
+    trending    = recommender.get_trending_movies(lang_filter=lang_filter, genre_filter=genre_filter, n=12)
+    popular     = recommender.get_popular_movies(lang_filter=lang_filter, genre_filter=genre_filter, n=12)
 
     if hero_movie:
-        hero_movie["poster"] = hero_movie.get("poster_url") or fetch_poster(hero_movie.get("title"), hero_movie.get("release_year"))
+        hero_movie["poster"] = get_movie_poster(hero_movie)
     hydrate_posters(recommended)
     hydrate_posters(trending)
     hydrate_posters(popular)
@@ -191,6 +216,7 @@ def index():
         trending=trending,
         popular=popular,
         selected_lang=lang_filter,
+        selected_genre=genre_filter,
         history=history,
         total_titles=len(ALL_TITLES)
     )
@@ -198,22 +224,23 @@ def index():
 
 @app.route("/recommend")
 def recommend():
-    """Results page: Recommendations for searched movie with history context & language filter."""
+    """Results page: Recommendations for searched movie with history context & filters."""
     movie = request.args.get("movie", "").strip()
     lang_filter = request.args.get("lang", "All").strip()
+    genre_filter = request.args.get("genre", "All").strip()
     top_n = min(max(int(request.args.get("top_n", 10)), 1), 50)
 
     if not movie:
         return redirect(url_for("index"))
 
     if recommender is None:
-        return render_template("results.html", error="Recommendation service unavailable.", query=movie, results=[], query_movie=None)
+        return render_template("results.html", error="Recommendation service unavailable.", query=movie, results=[], query_movie=None, selected_lang=lang_filter, selected_genre=genre_filter)
 
     add_user_history(movie)
     history = get_user_history()
 
     results, query_movie = recommender.get_recommendations(
-        movie, top_n=top_n, lang_filter=lang_filter, search_history=history
+        movie, top_n=top_n, lang_filter=lang_filter, genre_filter=genre_filter, search_history=history
     )
 
     if results is None:
@@ -221,11 +248,11 @@ def recommend():
             "results.html",
             error=f'<strong>"{movie}"</strong> was not found in our database. '
                   f'Try searching titles like <em>"Vikram"</em>, <em>"RRR"</em>, <em>"Manjummel Boys"</em>, or <em>"Inception"</em>.',
-            query=movie, results=[], query_movie=None, selected_lang=lang_filter
+            query=movie, results=[], query_movie=None, selected_lang=lang_filter, selected_genre=genre_filter
         )
 
     if query_movie:
-        query_movie["poster"] = query_movie.get("poster_url") or fetch_poster(query_movie["title"], query_movie.get("release_year"))
+        query_movie["poster"] = get_movie_poster(query_movie)
 
     hydrate_posters(results)
 
@@ -235,32 +262,67 @@ def recommend():
         query=movie,
         query_movie=query_movie,
         selected_lang=lang_filter,
-        error=None
+        selected_genre=genre_filter,
+        history=history
+    )
+
+
+@app.route("/history")
+def history():
+    """Full Page Search History view with hydrated movie cards."""
+    raw_history = get_user_history()
+    history_items = []
+
+    if recommender and raw_history:
+        for title in reversed(raw_history):
+            idx = recommender.find_movie_idx(title)
+            if idx is not None:
+                row = recommender.df.iloc[idx]
+                m_dict = recommender._row_to_dict(row)
+                m_dict["poster"] = get_movie_poster(m_dict)
+                history_items.append(m_dict)
+            else:
+                history_items.append({
+                    "title": title,
+                    "poster": fetch_poster(title),
+                    "language": "Movie",
+                    "rating": "8.0",
+                    "release_year": "2024",
+                    "genres": "AI Recommended"
+                })
+
+    return render_template(
+        "history.html",
+        history_items=history_items,
+        raw_history=raw_history,
+        history=raw_history
     )
 
 
 @app.route("/api/filter")
 def api_filter():
-    """AJAX Endpoint: Dynamic section updates when switching language filters."""
+    """AJAX Endpoint: Dynamic section updates when switching language/genre filters."""
     lang_filter = request.args.get("lang", "All").strip()
+    genre_filter = request.args.get("genre", "All").strip()
     history = get_user_history()
 
     if recommender is None:
         return jsonify({"error": "Recommender unavailable"}), 503
 
-    hero_movie  = recommender.get_featured_hero_movie(lang_filter)
-    recommended = recommender.get_personalized_recommendations(history, lang_filter, n=12)
-    trending    = recommender.get_trending_movies(lang_filter, n=12)
-    popular     = recommender.get_popular_movies(lang_filter, n=12)
+    hero_movie  = recommender.get_featured_hero_movie(lang_filter=lang_filter, genre_filter=genre_filter)
+    recommended = recommender.get_personalized_recommendations(history, lang_filter=lang_filter, genre_filter=genre_filter, n=12)
+    trending    = recommender.get_trending_movies(lang_filter=lang_filter, genre_filter=genre_filter, n=12)
+    popular     = recommender.get_popular_movies(lang_filter=lang_filter, genre_filter=genre_filter, n=12)
 
     if hero_movie:
-        hero_movie["poster"] = hero_movie.get("poster_url") or fetch_poster(hero_movie.get("title"), hero_movie.get("release_year"))
+        hero_movie["poster"] = get_movie_poster(hero_movie)
     hydrate_posters(recommended)
     hydrate_posters(trending)
     hydrate_posters(popular)
 
     return jsonify({
         "lang": lang_filter,
+        "genre": genre_filter,
         "hero": hero_movie,
         "recommended": recommended,
         "trending": trending,

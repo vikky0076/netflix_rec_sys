@@ -49,23 +49,63 @@
     </div>
 
     <div class="nav-right">
+      <a href="/" class="home-nav-btn" title="Go to Homepage"><i class="bi bi-house-door-fill"></i> Home</a>
       {% if history %}
-      <div class="history-badge-btn" id="historyBtn" title="Your recent search history">
+      <a href="/history" class="history-badge-btn" title="Your full search history">
         <i class="bi bi-clock-history"></i> History ({{ history | length }})
-      </div>
+      </a>
+      {% else %}
+      <a href="/history" class="history-badge-btn" title="Your full search history">
+        <i class="bi bi-clock-history"></i> History
+      </a>
       {% endif %}
-      <a href="/" class="refresh-btn" title="Refresh dynamic homepage"><i class="bi bi-arrow-clockwise"></i> Refresh</a>
+      <a href="/" class="refresh-btn" title="Refresh dynamic homepage" aria-label="Refresh"><i class="bi bi-arrow-clockwise"></i></a>
+
+      <!-- Three-Dot Menu Options (Language Selection) -->
+      <div class="three-dots-dropdown-wrap" id="langDropdownWrap">
+        <button type="button" class="three-dots-btn" id="threeDotsBtn" title="Language Filter & Options" aria-label="Language options">
+          <i class="bi bi-three-dots-vertical"></i>
+        </button>
+
+        <div class="lang-dropdown-menu" id="langDropdownMenu">
+          <div class="dropdown-header-title"><i class="bi bi-globe2"></i> Filter Language</div>
+          <div class="dropdown-lang-options">
+            {% set languages = ['All', 'Tamil', 'Telugu', 'Malayalam', 'Kannada', 'Hindi', 'English', 'Korean', 'Japanese'] %}
+            {% for lang in languages %}
+              <a href="/?lang={{ lang }}&genre={{ selected_genre | default('All') }}" class="lang-dropdown-item {% if selected_lang == lang or (selected_lang == '' and lang == 'All') %}active{% endif %}" data-lang="{{ lang }}">
+                <span>{{ lang }}</span>
+                {% if selected_lang == lang or (selected_lang == '' and lang == 'All') %}
+                  <i class="bi bi-check2 check-mark"></i>
+                {% endif %}
+              </a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
     </div>
   </nav>
 
-  <!-- ── Language Selector Filter Pills ──────────────────────── -->
-  <section class="language-filter-bar">
-    <div class="filter-label"><i class="bi bi-globe2"></i> Filter Language:</div>
+  <!-- ── Genre / Category Filter Bar ────────────────────────── -->
+  <section class="genre-filter-bar">
+    <div class="filter-label"><i class="bi bi-film"></i> Genre:</div>
     <div class="filter-pills">
-      {% set languages = ['All', 'Tamil', 'Telugu', 'Malayalam', 'Kannada', 'Hindi', 'English', 'Korean', 'Japanese'] %}
-      {% for lang in languages %}
-        <a href="/?lang={{ lang }}" class="filter-pill {% if selected_lang == lang or (selected_lang == '' and lang == 'All') %}active{% endif %}" data-lang="{{ lang }}">
-          {{ lang }}
+      {% set genres_list = [
+        {'name': 'All', 'icon': '🍿'},
+        {'name': 'Action', 'icon': '💥'},
+        {'name': 'Comedy', 'icon': '😂'},
+        {'name': 'Drama', 'icon': '🎭'},
+        {'name': 'Romance', 'icon': '❤️'},
+        {'name': 'Thriller', 'icon': '🔪'},
+        {'name': 'Sci-Fi', 'icon': '🚀'},
+        {'name': 'Horror', 'icon': '👻'},
+        {'name': 'Crime', 'icon': '🕵️'},
+        {'name': 'Documentary', 'icon': '📹'},
+        {'name': 'Animation', 'icon': '🎨'},
+        {'name': 'Family', 'icon': '👨‍👩‍👧'}
+      ] %}
+      {% for g in genres_list %}
+        <a href="/?lang={{ selected_lang | default('All') }}&genre={{ g.name }}" class="filter-pill {% if selected_genre == g.name or (selected_genre == '' and g.name == 'All') %}active{% endif %}" data-genre="{{ g.name }}">
+          <span class="genre-icon">{{ g.icon }}</span> {{ g.name }}
         </a>
       {% endfor %}
     </div>

@@ -176,4 +176,31 @@ document.addEventListener('DOMContentLoaded', () => {
     if (overlay) overlay.classList.add('hidden');
   });
 
+  // ── 5. Three-Dots Menu Dropdown Toggle ──────────────────────
+  const threeDotsBtn = document.getElementById('threeDotsBtn');
+  const langDropdownMenu = document.getElementById('langDropdownMenu');
+  const langDropdownWrap = document.getElementById('langDropdownWrap');
+
+  if (threeDotsBtn && langDropdownMenu) {
+    threeDotsBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isShowing = langDropdownMenu.classList.toggle('show');
+      threeDotsBtn.classList.toggle('active', isShowing);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (langDropdownWrap && !langDropdownWrap.contains(e.target)) {
+        langDropdownMenu.classList.remove('show');
+        threeDotsBtn.classList.remove('active');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        langDropdownMenu.classList.remove('show');
+        threeDotsBtn.classList.remove('active');
+      }
+    });
+  }
+
 });
