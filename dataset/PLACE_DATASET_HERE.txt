@@ -1,0 +1,14 @@
+Place the Netflix dataset file here.
+
+Download instructions:
+─────────────────────────────────────────────
+Option A – Kaggle CLI (Recommended):
+  pip install kaggle
+  kaggle datasets download -d shivamb/netflix-shows -p . --unzip
+
+Option B – Manual:
+  1. Visit: https://www.kaggle.com/datasets/shivamb/netflix-shows
+  2. Click Download
+  3. Extract and place 'netflix_titles.csv' in this folder
+
+Expected file: dataset/netflix_titles.csv

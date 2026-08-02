@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NetFlix — Premium Movie Streaming & AI Recommendations</title>
+  <meta name="description" content="Stream and discover personalized recommendations across Kollywood, Tollywood, Mollywood, Sandalwood, Bollywood & Hollywood." />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Premium Streaming CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body class="streaming-theme">
+
+  <!-- ── Loading Overlay ────────────────────────────────────── -->
+  <div class="loading-overlay hidden" id="loadingOverlay">
+    <div class="spinner"></div>
+    <p class="loading-text">Personalizing your experience...</p>
+  </div>
+
+  <!-- ── Navbar ─────────────────────────────────────────────── -->
+  <nav class="stream-nav">
+    <div class="nav-left">
+      <a href="/" class="nav-brand">NETFLIX<span>REC</span></a>
+    </div>
+
+    <!-- Search Form in Navbar -->
+    <div class="nav-center">
+      <form action="/recommend" method="GET" class="search-box-wrap" id="navSearchForm">
+        <input
+          type="text"
+          name="movie"
+          id="navSearchInput"
+          class="search-input"
+          placeholder="Search movies, actors, directors..."
+          autocomplete="off"
+          spellcheck="false"
+          required
+        />
+        <i class="bi bi-search search-icon"></i>
+        <button type="submit" class="search-submit-btn">
+          <i class="bi bi-arrow-right"></i>
+        </button>
+      </form>
+    </div>
+
+    <div class="nav-right">
+      {% if history %}
+      <div class="history-badge-btn" id="historyBtn" title="Your recent search history">
+        <i class="bi bi-clock-history"></i> History ({{ history | length }})
+      </div>
+      {% endif %}
+      <a href="/" class="refresh-btn" title="Refresh dynamic homepage"><i class="bi bi-arrow-clockwise"></i> Refresh</a>
+    </div>
+  </nav>
+
+  <!-- ── Language Selector Filter Pills ──────────────────────── -->
+  <section class="language-filter-bar">
+    <div class="filter-label"><i class="bi bi-globe2"></i> Filter Language:</div>
+    <div class="filter-pills">
+      {% set languages = ['All', 'Tamil', 'Telugu', 'Malayalam', 'Kannada', 'Hindi', 'English', 'Korean', 'Japanese'] %}
+      {% for lang in languages %}
+        <a href="/?lang={{ lang }}" class="filter-pill {% if selected_lang == lang or (selected_lang == '' and lang == 'All') %}active{% endif %}" data-lang="{{ lang }}">
+          {{ lang }}
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- ── Hero Banner Section ────────────────────────────────── -->
+  {% if hero %}
+  <section class="hero-banner">
+    <div class="hero-backdrop" style="background-image: linear-gradient(to right, rgba(15,15,16,0.95) 20%, rgba(15,15,16,0.6) 60%, rgba(15,15,16,0.85) 100%), url('{{ hero.backdrop_url or hero.poster }}');"></div>
+
+    <div class="hero-content-wrap">
+      <div class="hero-badge">
+        <span class="lang-badge lang-{{ hero.language | lower }}">{{ hero.language }}</span>
+        <span class="hero-type-tag">{{ hero.type }}</span>
+        <span class="hero-rating-tag"><i class="bi bi-star-fill"></i> {{ hero.rating }}/10</span>
+      </div>
+
+      <h1 class="hero-movie-title">{{ hero.title }}</h1>
+
+      <div class="hero-meta">
+        <span>{{ hero.release_year }}</span>
+        <span class="dot">●</span>
+        <span>{{ hero.runtime }}</span>
+        <span class="dot">●</span>
+        <span>{{ hero.genres }}</span>
+      </div>
+
+      <p class="hero-overview">{{ hero.overview | truncate(220) }}</p>
+
+      <div class="hero-actions">
+        <a href="/recommend?movie={{ hero.title | urlencode }}&lang={{ selected_lang }}" class="btn-play">
+          <i class="bi bi-lightning-charge-fill"></i> Get AI Recommendations
+        </a>
+        {% if hero.cast and hero.cast != 'Lead Cast Ensemble' %}
+        <span class="hero-cast-preview"><i class="bi bi-people-fill"></i> {{ hero.cast | truncate(45) }}</span>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- ── Dynamic Content Rows ───────────────────────────────── -->
+  <main class="content-container">
+
+    <!-- 1. Recommended For You Row (Personalized) -->
+    {% if recommended %}
+    <section class="movie-row-section">
+      <div class="row-header">
+        <h2 class="row-title">
+          <i class="bi bi-stars" style="color:var(--netflix-red);"></i> Recommended For You
+          {% if selected_lang and selected_lang != 'All' %}<span class="row-subtitle">in {{ selected_lang }}</span>{% endif %}
+        </h2>
+        <span class="row-hint">Personalized AI Picks</span>
+      </div>
+      <div class="carousel-track">
+        {% for movie in recommended %}
+          {% include 'movie_card.html' %}
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- 2. Trending Now Row -->
+    {% if trending %}
+    <section class="movie-row-section">
+      <div class="row-header">
+        <h2 class="row-title">
+          <i class="bi bi-fire" style="color:#ff9900;"></i> Trending Now
+          {% if selected_lang and selected_lang != 'All' %}<span class="row-subtitle">({{ selected_lang }})</span>{% endif %}
+        </h2>
+        <span class="row-hint">Refreshes dynamically</span>
+      </div>
+      <div class="carousel-track">
+        {% for movie in trending %}
+          {% include 'movie_card.html' %}
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- 3. Top Rated & Popular Row -->
+    {% if popular %}
+    <section class="movie-row-section">
+      <div class="row-header">
+        <h2 class="row-title">
+          <i class="bi bi-trophy-fill" style="color:#ffcc00;"></i> Top Rated &amp; Popular
+        </h2>
+        <span class="row-hint">IMDb High Ratings</span>
+      </div>
+      <div class="carousel-track">
+        {% for movie in popular %}
+          {% include 'movie_card.html' %}
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+  </main>
+
+  <!-- ── Search History Modal ───────────────────────────────── -->
+  <div class="history-modal hidden" id="historyModal">
+    <div class="history-modal-content">
+      <div class="hm-header">
+        <h3><i class="bi bi-clock-history"></i> Your Search History</h3>
+        <button class="hm-close" id="closeHistoryModal">&times;</button>
+      </div>
+      <div class="hm-body">
+        <p class="hm-desc">Our AI engine uses your recent searches to personalize homepage recommendations:</p>
+        <div class="history-tags">
+          {% for item in history %}
+            <a href="/recommend?movie={{ item | urlencode }}" class="history-tag-chip">
+              <i class="bi bi-search"></i> {{ item }}
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="hm-footer">
+        <button id="clearHistoryBtn" class="btn-clear-history"><i class="bi bi-trash"></i> Clear History</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Streaming Footer ────────────────────────────────────── -->
+  <footer class="stream-footer">
+    <div class="footer-logo">NETFLIX<span>REC</span></div>
+    <p class="footer-copy">&copy; 2026 NetFlixStream Platform. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

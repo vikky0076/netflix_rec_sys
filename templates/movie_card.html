@@ -1,0 +1,77 @@
+{# Modular Reusable Movie Card Component #}
+{% set genres = (movie.genres or movie.listed_in or '') | lower %}
+{% if 'action' in genres or 'adventure' in genres %}
+  {% set genre_cls = 'genre-action'   %}{% set genre_icon = '💥' %}
+{% elif 'comedy' in genres %}
+  {% set genre_cls = 'genre-comedy'   %}{% set genre_icon = '😂' %}
+{% elif 'thriller' in genres or 'crime' in genres %}
+  {% set genre_cls = 'genre-thriller' %}{% set genre_icon = '🔪' %}
+{% elif 'horror' in genres %}
+  {% set genre_cls = 'genre-horror'   %}{% set genre_icon = '👻' %}
+{% elif 'sci-fi' in genres or 'sci fi' in genres %}
+  {% set genre_cls = 'genre-sci-fi'   %}{% set genre_icon = '🚀' %}
+{% elif 'romance' in genres or 'romantic' in genres %}
+  {% set genre_cls = 'genre-romance'  %}{% set genre_icon = '❤️' %}
+{% elif 'drama' in genres %}
+  {% set genre_cls = 'genre-drama'    %}{% set genre_icon = '🎭' %}
+{% else %}
+  {% set genre_cls = 'genre-default'  %}{% set genre_icon = '🎬' %}
+{% endif %}
+
+<a href="/recommend?movie={{ movie.title | urlencode }}&lang={{ selected_lang | default('All') }}" class="stream-card" title="{{ movie.title }}">
+  <div class="card-poster-wrapper {{ genre_cls }}">
+    {% if movie.poster %}
+      <img
+        src="{{ movie.poster }}"
+        alt="{{ movie.title }} poster"
+        class="card-poster-img"
+        loading="lazy"
+        onerror="this.style.display='none'; const fb = this.parentElement.querySelector('.poster-fallback-badge'); if(fb) fb.style.display='flex';"
+      />
+      <div class="poster-fallback-badge" style="display:none;">
+        <span class="fb-icon">{{ genre_icon }}</span>
+        <span class="fb-title">{{ movie.title }}</span>
+      </div>
+    {% else %}
+      <div class="poster-fallback-badge" style="display:flex;">
+        <span class="fb-icon">{{ genre_icon }}</span>
+        <span class="fb-title">{{ movie.title }}</span>
+      </div>
+    {% endif %}
+
+    <!-- Top card overlays -->
+    {% if movie.language %}
+    <div class="card-lang-overlay">
+      <span class="lang-badge lang-{{ movie.language | lower }}">{{ movie.language }}</span>
+    </div>
+    {% endif %}
+
+    {% if movie.rating %}
+    <div class="card-rating-overlay">
+      <i class="bi bi-star-fill"></i> {{ movie.rating }}
+    </div>
+    {% endif %}
+
+    <!-- Hover details overlay -->
+    <div class="card-hover-overlay">
+      <div class="cho-header">
+        <span class="cho-title">{{ movie.title }}</span>
+        <span class="cho-year">{{ movie.release_year }}</span>
+      </div>
+      <div class="cho-genre">{{ movie.genres }}</div>
+      <p class="cho-desc">{{ movie.overview | default(movie.description) | truncate(90) }}</p>
+      <div class="cho-btn">
+        <i class="bi bi-play-circle-fill"></i> Get AI Recs
+      </div>
+    </div>
+  </div>
+
+  <div class="card-bottom-info">
+    <div class="card-title-text">{{ movie.title }}</div>
+    <div class="card-sub-meta">
+      <span>{{ movie.release_year }}</span>
+      <span class="meta-dot">●</span>
+      <span>{{ movie.genres.split(',')[0] }}</span>
+    </div>
+  </div>
+</a>

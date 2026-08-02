@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    {% if query_movie %}Recommendations for "{{ query_movie.title }}"
+    {% elif query %}Search: "{{ query }}"
+    {% else %}Recommendations
+    {% endif %} — FlixPulse
+  </title>
+  <meta name="description" content="Top recommendations similar to {{ query }}." />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Premium Streaming CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body class="streaming-theme">
+
+  <!-- ── Loading Overlay ────────────────────────────────────── -->
+  <div class="loading-overlay hidden" id="loadingOverlay">
+    <div class="spinner"></div>
+    <p class="loading-text">Personalizing your experience...</p>
+  </div>
+
+  <!-- ── Navbar ─────────────────────────────────────────────── -->
+  <nav class="stream-nav">
+    <div class="nav-left">
+      <a href="/" class="nav-brand">NETFLIX<span>REC</span></a>
+    </div>
+
+    <div class="nav-center">
+      <form action="/recommend" method="GET" class="search-box-wrap" id="resultsSearchForm">
+        <input type="hidden" name="lang" value="{{ selected_lang | default('All') }}" />
+        <input
+          type="text"
+          name="movie"
+          class="search-input"
+          placeholder="Search another title..."
+          value="{{ query }}"
+          autocomplete="off"
+          spellcheck="false"
+          required
+        />
+        <i class="bi bi-search search-icon"></i>
+        <button type="submit" class="search-submit-btn">
+          <i class="bi bi-arrow-right"></i>
+        </button>
+      </form>
+    </div>
+
+    <div class="nav-right">
+      <a href="/" class="btn-ghost"><i class="bi bi-house-door-fill"></i> Home</a>
+    </div>
+  </nav>
+
+  <!-- ── Language Filter Tabs ────────────────────────────────── -->
+  <section class="language-filter-bar">
+    <div class="filter-label"><i class="bi bi-funnel-fill"></i> Language Filter:</div>
+    <div class="filter-pills">
+      {% set languages = ['All', 'Tamil', 'Telugu', 'Malayalam', 'Kannada', 'Hindi', 'English', 'Korean', 'Japanese'] %}
+      {% for lang in languages %}
+        <a href="/recommend?movie={{ query | urlencode }}&lang={{ lang }}" class="filter-pill {% if selected_lang == lang or (selected_lang == '' and lang == 'All') %}active{% endif %}">
+          {{ lang }}
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- ── Content Section ────────────────────────────────────── -->
+  <main class="results-container">
+
+    {% if error %}
+    <section class="error-spotlight">
+      <div class="error-icon">🎬</div>
+      <h1 class="error-title">Movie Not Found</h1>
+      <p class="error-msg">{{ error | safe }}</p>
+      <div style="margin-top:24px;">
+        <a href="/" class="btn-play"><i class="bi bi-house"></i> Return to Streaming Home</a>
+      </div>
+    </section>
+
+    {% else %}
+
+    <!-- Target Movie Spotlight Card -->
+    {% if query_movie %}
+    <section class="spotlight-card">
+      <div class="spotlight-poster-wrap">
+        {% if query_movie.poster %}
+          <img src="{{ query_movie.poster }}" alt="{{ query_movie.title }} poster" class="spotlight-poster" />
+        {% else %}
+          <div class="spotlight-poster-fallback">🎬</div>
+        {% endif %}
+      </div>
+
+      <div class="spotlight-info">
+        <div class="spotlight-tag"><i class="bi bi-check-circle-fill"></i> You Searched For</div>
+        <h1 class="spotlight-title">{{ query_movie.title }}</h1>
+
+        <div class="spotlight-meta-row">
+          {% if query_movie.language %}<span class="lang-badge lang-{{ query_movie.language | lower }}">{{ query_movie.language }}</span>{% endif %}
+          <span class="meta-year">{{ query_movie.release_year }}</span>
+          <span class="meta-rating"><i class="bi bi-star-fill"></i> {{ query_movie.rating }}/10</span>
+          <span class="meta-runtime">{{ query_movie.runtime }}</span>
+          <span class="meta-type">{{ query_movie.type }}</span>
+        </div>
+
+        <div class="spotlight-genres">
+          {% for g in query_movie.genres.split(',') %}
+            <span class="genre-pill">{{ g.strip() }}</span>
+          {% endfor %}
+        </div>
+
+        <p class="spotlight-overview">{{ query_movie.overview or query_movie.description }}</p>
+
+        <div class="spotlight-people">
+          {% if query_movie.director and query_movie.director != 'Renowned Director' %}
+            <div><strong>Director:</strong> {{ query_movie.director }}</div>
+          {% endif %}
+          {% if query_movie.cast and query_movie.cast != 'Lead Cast Ensemble' %}
+            <div><strong>Cast:</strong> {{ query_movie.cast | truncate(100) }}</div>
+          {% endif %}
+        </div>
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- Top Recommendations Grid -->
+    <section class="results-grid-section">
+      <div class="row-header">
+        <h2 class="row-title">
+          <i class="bi bi-stars" style="color:var(--netflix-red);"></i> Top AI Recommendations
+          {% if selected_lang and selected_lang != 'All' %}<span class="row-subtitle">({{ selected_lang }})</span>{% endif %}
+        </h2>
+        <span class="row-hint">Based on story, genre, cast &amp; direction</span>
+      </div>
+
+      <div class="results-grid">
+        {% for movie in results %}
+          <div class="grid-card-wrap">
+            <div class="card-rank-badge">#{{ movie.rank }}</div>
+            <div class="card-match-badge">{{ movie.similarity_pct }}% match</div>
+            {% include 'movie_card.html' %}
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    {% endif %}
+
+  </main>
+
+  <footer class="stream-footer">
+    <div class="footer-logo">NETFLIX<span>REC</span></div>
+    <p class="footer-copy">&copy; 2026 FlixPulse Stream Platform. All rights reserved.</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
