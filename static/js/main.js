@@ -230,4 +230,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ── 6. Fixed Mobile Bottom Nav Triggers ─────────────────────
+  const mobileSearchTrigger = document.getElementById('mobileSearchTrigger');
+  const mobileLangTrigger = document.getElementById('mobileLangTrigger');
+  const mainSearchInput = document.querySelector('.search-input');
+
+  if (mobileSearchTrigger && mainSearchInput) {
+    mobileSearchTrigger.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setTimeout(() => mainSearchInput.focus(), 300);
+    });
+  }
+
+  if (mobileLangTrigger && threeDotsBtn && langDropdownMenu) {
+    mobileLangTrigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const isShowing = langDropdownMenu.classList.toggle('show');
+      threeDotsBtn.classList.toggle('active', isShowing);
+    });
+  }
+
 });

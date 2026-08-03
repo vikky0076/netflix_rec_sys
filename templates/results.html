@@ -205,7 +205,29 @@
 
     {% endif %}
 
-  </main>
+  <!-- ── Fixed Mobile Bottom Navigation Bar (Mobile Devices Only) ── -->
+  <nav class="mobile-bottom-nav">
+    <a href="/" class="mobile-nav-tab">
+      <i class="bi bi-house-door-fill"></i>
+      <span>Home</span>
+    </a>
+    <button type="button" class="mobile-nav-tab active" id="mobileSearchTrigger">
+      <i class="bi bi-search"></i>
+      <span>Search</span>
+    </button>
+    <a href="/history" class="mobile-nav-tab">
+      <i class="bi bi-clock-history"></i>
+      <span>History</span>
+    </a>
+    <button type="button" class="mobile-nav-tab" id="mobileLangTrigger">
+      <i class="bi bi-globe2"></i>
+      <span>Filter</span>
+    </button>
+    <a href="javascript:location.reload()" class="mobile-nav-tab">
+      <i class="bi bi-arrow-clockwise"></i>
+      <span>Refresh</span>
+    </a>
+  </nav>
 
   <footer class="stream-footer">
     <div class="footer-logo">NETFLIX<span>REC</span></div>

@@ -9912,11 +9912,11 @@
     "rating": 6.9
   },
   "pokémon master journeys: the series_2021": {
-    "poster_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiB2aWV3Qm94PSIwIDAgMzAwIDQ1MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFhMWEyNCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzEyMTIxOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYTBhMGQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJlZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRTUwOTE0Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2IyMDcxMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNiZykiLz4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxODAiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNikiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE4MCIgcj0iNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNyZWQpIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuODUiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjIwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIG9wYWNpdHk9IjAuOTUiPlA8L3RleHQ+CiAgPHJlY3QgeD0iMjUiIHk9IjMyMCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyIiBmaWxsPSJ1cmwoI3JlZCkiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjM1OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlBva8OpbW9uIE1hc3RlciBKb3Vybi4uLjwvdGV4dD4KICA8dGV4dCB4PSIxNTAiIHk9IjM4OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiM4MDgwODgiIGxldHRlci1zcGFjaW5nPSIyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5TVFJFQU1JTkcgUExBVEZPUk08L3RleHQ+Cjwvc3ZnPg==",
-    "backdrop_url": "",
+    "poster_url": "https://image.tmdb.org/t/p/w500/lP4zwr0F7hWTbAFltfoFTc2AxRG.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/yYpQV25I7XB6S0POJOScPjxYWV5.jpg",
     "title": "Pokémon Master Journeys: The Series",
-    "overview": "",
-    "rating": 7.5
+    "overview": "Join Ash accompanied by his partner Pikachu, as he travels through many regions, meets new friends and faces new challenges on his quest to become a Pokémon Master.",
+    "rating": 8.0
   },
   "my little pony: a new generation_2021": {
     "poster_url": "https://image.tmdb.org/t/p/w500/uvbj8puRj37Pc8FS4rIfVeReYFF.jpg",
@@ -9931,5 +9931,383 @@
     "title": "Quarantine Tales",
     "overview": "Quarantine Tales is a collection of stories by 5 directors who tell the stories of life experienced during the pandemic.",
     "rating": 6.6
+  },
+  "the smart money woman_2020": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/kSifdgS3PR0hpatVt0IvtAskch9.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/7SQGTrASXv90JbFEU4BfZZnnEJB.jpg",
+    "title": "The Smart Money Woman",
+    "overview": "Meet Zuri. She's living a fabulous life. Great car, gorgeous apartment, well paid job. Meet Zuri. Broken down car, an apartment she cant afford, a job she's about to lose. What's a broke girl to do. With her best friends Tami (the flighty fashion designer), Lara (the tough oil and gas executive), Adesuwa (the conservative lawyer), and Ladun (the fabulous housewife), Zuri grows a little, learns a lot and navigates her way to making better financial decisions and building wealth. This show tackles, debt, spending, the consumerist culture of the African middle class, the fear and misconceptions surrounding money and the lack of it, love, friendships, cultural and societal pressures and the roles they play in success. With each episode comes a Smart Money Lesson, there to help you work your way up the financial ladder.",
+    "rating": 2.0
+  },
+  "steel rain_2018": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/zCXpkcMAUxtOp55bWMpBZjpHr5g.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/3eEtOooEzdpIA9hf0V4b5DFqyjd.jpg",
+    "title": "Steel Rain",
+    "overview": "Amid a coup, a North Korean agent escapes south with the country's injured leader in an attempt to keep him alive and prevent a Korean war.",
+    "rating": 7.1
+  },
+  "voiceless_2020": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/rWR8dheNhJfaKcPAN5n58K7ve2o.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/2BzPfi9cDqXFTmjvIKpvz3lcT61.jpg",
+    "title": "Voiceless",
+    "overview": "A bright and promising young girl gets abducted and taken to a terrorist camp, where she unexpectedly crosses paths with her soulmate.",
+    "rating": 2.0
+  },
+  "dear white people_2021": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/jH3851P2DjjnBsrjphbR1CWRzm6.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/aZXtziEpZR1GpPwzIyr2s1dRWsW.jpg",
+    "title": "Dear White People",
+    "overview": "A campus culture war between Blacks and whites at a predominantly white Ivy League college comes to a head when the staff of a satirical magazine stages an offensive Halloween party.",
+    "rating": 6.1
+  },
+  "revenger_2018": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/7zUTOTCi5PfvboAOYFgDf6vejmr.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/n5LJDsjlpbfnN9h2Qk7xtdX8xNi.jpg",
+    "title": "Revenger",
+    "overview": "Hell-bent on avenging the murder of his family, a former detective infiltrates a remote island that serves as a prison for vicious death row criminals.",
+    "rating": 5.6
+  },
+  "nayak giri (2006)_1985": {
+    "poster_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiB2aWV3Qm94PSIwIDAgMzAwIDQ1MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFhMWEyNCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzEyMTIxOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYTBhMGQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJlZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRTUwOTE0Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2IyMDcxMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNiZykiLz4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxODAiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNikiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE4MCIgcj0iNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNyZWQpIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuODUiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjIwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIG9wYWNpdHk9IjAuOTUiPk48L3RleHQ+CiAgPHJlY3QgeD0iMjUiIHk9IjMyMCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyIiBmaWxsPSJ1cmwoI3JlZCkiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjM1OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPk5heWFrIEdpcmkgKDIwMDYpPC90ZXh0PgogIDx0ZXh0IHg9IjE1MCIgeT0iMzg4IiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzgwODA4OCIgbGV0dGVyLXNwYWNpbmc9IjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNUUkVBTUlORyBQTEFURk9STTwvdGV4dD4KPC9zdmc+",
+    "backdrop_url": "",
+    "title": "Nayak Giri (2006)",
+    "overview": "",
+    "rating": 7.5
+  },
+  "car masters: rust to riches_2021": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/2wS7gqsVNORz9qPaNfDOoSDXIi2.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/w7jYbwtwODd4Wpx95b53uFVoT20.jpg",
+    "title": "Car Masters: Rust to Riches",
+    "overview": "The colorful crew at Gotham Garage overhauls an eclectic collection of cars and trucks, trading up to a showstopper they can sell for big bucks.",
+    "rating": 7.5
+  },
+  "castle and castle_2021": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/qewfjmkNpggNuXQtrUjMl8hvHoM.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/qhc9m6lg6ia8fKk7Y1mxFntjYYv.jpg",
+    "title": "Castle and Castle",
+    "overview": "Liana and Alexa are best friends who share everything, including their love of singing. Upon meeting a girl inside a mirror, the duo embark on a journey that will put their friendship to the ultimate test.",
+    "rating": 7.4
+  },
+  "the prison_2017": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/orMkBkPqu7szuBRdMLUB4TWKiVV.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/5cxaJCzHwQisLeVewv7jiuqsVLp.jpg",
+    "title": "The Prison",
+    "overview": "In 1971, Stanford's Professor Philip Zimbardo conducts a controversial psychology experiment in which college students pretend to be either prisoners or guards, but the proceedings soon get out of hand. Based on a true story.",
+    "rating": 6.8
+  },
+  "dharmakshetra_2014": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/mMo5kK8FrKDSsqXOjiYe3H11ueJ.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/bZqEljgOh0veSFhGokY3xGd3cSW.jpg",
+    "title": "Dharmakshetra",
+    "overview": "After the end of 18 days war of Mahabharata, Pandavas and Kauravas reach the court of Chitragupta where they have to answer their actions of their past life. In each episode one of the character takes the centre stage to answer the questions asked by Chitragupta on behalf of the others.",
+    "rating": 6.0
+  },
+  "droppin' cash: los angeles_2019": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/18KibkWUNxuci2XveWtFlF1zjTu.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/askIP4A6tboE0CCO7hs6uMAwdT8.jpg",
+    "title": "Droppin' Cash: Los Angeles",
+    "overview": "This Complex series follows the paper trail of musicians, athletes and influencers in LA as they blow through stacks on the finer things in life.",
+    "rating": 4.3
+  },
+  "space sweepers_2021": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/bmemsraCG1kIthY74NjDnnLRT2Q.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/drulhSX7P5TQlEMQZ3JoXKSDEfz.jpg",
+    "title": "Space Sweepers",
+    "overview": "When the crew of a space junk collector ship called The Victory discovers a humanoid robot named Dorothy that's known to be a weapon of mass destruction, they get involved in a risky business deal which puts their lives at stake.",
+    "rating": 7.0
+  },
+  "masters of the universe: revelation_2021": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/oRuyGUHdoaQxWP3SDfafGkStxTC.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/eQySd26OW7UmCuaeBOL7qy6foMn.jpg",
+    "title": "Masters of the Universe: Revelation",
+    "overview": "After being separated for 15 years, the Sword of Power leads Prince Adam back to Eternia, where he discovers his home shattered under the fiendish rule of Skeletor. To save his family and his world, Adam must join forces with his closest allies, Teela and Duncan/Man-At-Arms, and embrace his true destiny as He-Man — the most powerful man in the universe.",
+    "rating": 7.3
+  },
+  "schumacher_2021": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/ucNYfsbX1Z4tjMSr3waxsHMVjve.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/lqEjBR3osI3Ezup9onTXYz7RyNZ.jpg",
+    "title": "Schumacher",
+    "overview": "Through exclusive interviews and archival footage, this documentary traces an intimate portrait of seven-time Formula 1 champion Michael Schumacher.",
+    "rating": 7.3
+  },
+  "nailed it_2021": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/f3nHcu3PwImTU8LbGCMROYSISIf.jpg",
+    "backdrop_url": "",
+    "title": "Nailed It",
+    "overview": "\"Nailed It\" chronicles the genesis and legacy of the 40 year Vietnamese nail salon and its influence on an $8 billion-dollar American industry. For mixed-race Vietnamese filmmaker Adele Pham it's personal, as she confronts her cultural conflicts and discovers her place within the community, by peeling back the layers of this niche trade seen by everyone but known to few.",
+    "rating": 6.0
+  },
+  "asura: the city of madness_2016": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/n5e1Lk0T8pk67m4DoGearNFeNjW.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/SRqyqMk9Zg80mwJBDHlNswYBwa.jpg",
+    "title": "Asura: The City of Madness",
+    "overview": "Abandoned in the barren wasteland of Kyoto, a savage, enraged orphan does whatever it takes to survive in the wild. When he crosses paths with civilization, he must learn to tame the beast within.",
+    "rating": 7.2
+  },
+  "nalan siruthai (1995)_1982": {
+    "poster_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiB2aWV3Qm94PSIwIDAgMzAwIDQ1MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFhMWEyNCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzEyMTIxOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYTBhMGQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJlZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRTUwOTE0Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2IyMDcxMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNiZykiLz4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxODAiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNikiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE4MCIgcj0iNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNyZWQpIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuODUiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjIwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIG9wYWNpdHk9IjAuOTUiPk48L3RleHQ+CiAgPHJlY3QgeD0iMjUiIHk9IjMyMCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyIiBmaWxsPSJ1cmwoI3JlZCkiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjM1OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPk5hbGFuIFNpcnV0aGFpICgxOTk1Li4uPC90ZXh0PgogIDx0ZXh0IHg9IjE1MCIgeT0iMzg4IiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzgwODA4OCIgbGV0dGVyLXNwYWNpbmc9IjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNUUkVBTUlORyBQTEFURk9STTwvdGV4dD4KPC9zdmc+",
+    "backdrop_url": "",
+    "title": "Nalan Siruthai (1995)",
+    "overview": "",
+    "rating": 7.5
+  },
+  "plastic cup boyz: laughing my mask off!_2021": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/t5Uie7efQpsQC2qOs4qKEVnd6IS.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/oU1rbZJU45rFw9VV6kxBWvIX7h6.jpg",
+    "title": "Plastic Cup Boyz: Laughing My Mask Off!",
+    "overview": "Three man act Plastic Cup Boyz, Joey Wells, Will \"Spank\" Horton and Na'im Lynn, taped their debut special at The House of Blues in San Diego. In front of a live audience, the trio covers topics including reality television, women's eyebrows, and looking like a cat clock.",
+    "rating": 5.6
+  },
+  "revelations: the masters of the universe: revelation aftershow_2021": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/lnCmYyYqpwXQAll5AUfNxlnvQk0.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/qv5zpQSx8naAm8C59DGVLMdZxbp.jpg",
+    "title": "Revelations: The Masters of the Universe: Revelation Aftershow",
+    "overview": "Two friends in Mexico discover the Lament Configuration and unleash Pinhead, but one decides to try to survive by swapping himself with someone else. Once they go missing, family members go in search of them, but find Pinhead instead.",
+    "rating": 3.5
+  },
+  "naruto the movie 2: legend of the stone of gelel_2005": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/itKMldwL6uhUZYO3X78NOFU4zzO.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/ldwWnaWoW8ziEFflimoraZouyvB.jpg",
+    "title": "Naruto the Movie 2: Legend of the Stone of Gelel",
+    "overview": "Naruto, Shikamaru, and Sakura are executing their mission of delivering a lost pet to a certain village. However, right in the midst of things, troops led by the mysterious knight, Temujin, attack them. In the violent battle, the three become separated. Temujin challenges Naruto to a fight and at the end of the fierce battle, both fall together from a high cliff...",
+    "rating": 6.8
+  },
+  "sisyphus_2021": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/yaQm6PIHwEq37Tgdvd9LPRVRNLt.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/tKF8mjg1MshqDY0wC3WfhGwQSQj.jpg",
+    "title": "Sisyphus",
+    "overview": "A stop-motion adaptation of the story of Sisyphus.",
+    "rating": 0.0
+  },
+  "nevertheless,_2021": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/u2fhjAKLpdJvBZ4DW9hCdBwuYVw.jpg",
+    "backdrop_url": "",
+    "title": "Nevertheless,",
+    "overview": "Taking a look behind the headlines of #MeToo and Times Up, NEVERTHELESS follows the intimate stories of 7 individuals who have experienced sexual harassment in the workplace or school context. From a writer's assistant on a top TV show to a Tech CEO and 911 dispatcher, the film shines a light on the ways in which we can shift our culture and rebuild.",
+    "rating": 8.3
+  },
+  "chhota bheem: master of shaolin_2011": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/bfr1AlNOmDbsFJKTxJhDB9dCTJk.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/hVPTQRmSw2trr7uWD6Sl7WTNY1t.jpg",
+    "title": "Chhota Bheem: Master of Shaolin",
+    "overview": "Young lord Krishna has fallen for demoness Maayandri’s revenge plot against him! Can Bheem rescue him and thwart Maayandri’s other destructive plans?",
+    "rating": 6.2
+  },
+  "operation chromite_2016": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/c9Md7hQTNjFUZF0LgpWpVCS1GcI.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/7kyhEU4T9SnUiB6qseTPQjClTuz.jpg",
+    "title": "Operation Chromite",
+    "overview": "A squad of soldiers fight in the Korean War's crucial Battle of Incheon.",
+    "rating": 5.8
+  },
+  "black holes | the edge of all we know_2021": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/kGCIlq9clx0YRH2qVEXXYdLht4j.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/3m0IVsFwO8p0Nz0jEzyJnbFLUtO.jpg",
+    "title": "Black Holes | The Edge of All We Know",
+    "overview": "Black holes stand at the limit of what we can know. To explore that edge of knowledge, the Event Horizon Telescope links observatories across the world to simulate an earth-sized instrument. With this tool the team pursues the first-ever picture of a black hole, resulting in an image seen by billions of people in April 2019. Meanwhile, Hawking and his team attack the black hole paradox at the heart of theoretical physics—Do predictive laws still function, even in these massive distortions of space and time? Weaving them together is a third strand, philosophical and exploratory using expressive animation. “Edge” is about practicing science at the highest level, a film where observation, theory, and philosophy combine to grasp these most mysterious objects.",
+    "rating": 6.6
+  },
+  "the great battle_2018": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/gv5ByLHZfn7MUKpjJovRTr5URGg.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/oGe84ddxe2R90hFwvCDxOINE8qL.jpg",
+    "title": "The Great Battle",
+    "overview": "Kingdom of Goguryeo, ancient Korea, 645. The ruthless Emperor Taizong of Tang invades the country and leads his armies towards the capital, achieving one victory after another, but on his way is the stronghold of Ansi, protected by General Yang Man-chu, who will do everything possible to stop the invasion, even if his troops are outnumbered by thousands of enemies.",
+    "rating": 6.7
+  },
+  "the outlaw josey wales_1976": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/92BZIFPbyCPNhExyFScxA3xF1dy.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/nEe0ziWyVhGTtuoXe2msdkz6NlO.jpg",
+    "title": "The Outlaw Josey Wales",
+    "overview": "After avenging his family's brutal murder, Wales is pursued by a pack of soldiers. He prefers to travel alone, but ragtag outcasts are drawn to him - and Wales can't bring himself to leave them unprotected.",
+    "rating": 7.5
+  },
+  "raja nadu: returns_1994": {
+    "poster_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiB2aWV3Qm94PSIwIDAgMzAwIDQ1MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFhMWEyNCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzEyMTIxOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYTBhMGQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJlZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRTUwOTE0Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2IyMDcxMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNiZykiLz4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxODAiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNikiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE4MCIgcj0iNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNyZWQpIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuODUiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjIwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIG9wYWNpdHk9IjAuOTUiPlI8L3RleHQ+CiAgPHJlY3QgeD0iMjUiIHk9IjMyMCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyIiBmaWxsPSJ1cmwoI3JlZCkiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjM1OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlJhamEgTmFkdTogUmV0dXJuczwvdGV4dD4KICA8dGV4dCB4PSIxNTAiIHk9IjM4OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiM4MDgwODgiIGxldHRlci1zcGFjaW5nPSIyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5TVFJFQU1JTkcgUExBVEZPUk08L3RleHQ+Cjwvc3ZnPg==",
+    "backdrop_url": "",
+    "title": "Raja Nadu: Returns",
+    "overview": "",
+    "rating": 7.5
+  },
+  "master of none_2021": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/gaQN9NSmeTTND0vBtkjs7rfAsQk.jpg",
+    "backdrop_url": "",
+    "title": "Master of None",
+    "overview": "Hee-Man grew up as an ordinary boy guided by Dila, not knowing he's a prince. As he starts looking for his parents, he meets Bato, who tells him his mission is to defend the people against the black forces of Black Tengko.",
+    "rating": 6.5
+  },
+  "sleepless_2017": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/9WkUSY33MDPGmz0vtzbsfaxTHVa.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/9VEOQvCnd8T8wILgyqjKgyhALw4.jpg",
+    "title": "Sleepless",
+    "overview": "Undercover Las Vegas police officer Vincent Downs, who has a lot of enemies, is caught in a high stakes web of corrupt cops and the mob-controlled casino underground. When a heist goes wrong, a crew of homicidal gangsters kidnap Downs’ teenage son T. In one sleepless night, Downs will have to rescue his son, evade an internal affairs investigation, and bring the kidnappers to justice.",
+    "rating": 5.9
+  },
+  "the master_2012": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/rUSjbyvYWN9H4az8xt0tDtU7I6v.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/6vvt0ghvrrzEB8Z1BLvmHOWUdxw.jpg",
+    "title": "The Master",
+    "overview": "Freddie, a volatile, heavy-drinking veteran who suffers from post-traumatic stress disorder, finds some semblance of a family when he stumbles onto the ship of Lancaster Dodd, the charismatic leader of a new \"religion\" he forms after World War II.",
+    "rating": 7.1
+  },
+  "the uncanny counter_2020": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/bsbuXbQqryQ8aJlwXFkFXbrYko1.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/jNyK0FF7t7oaU4wMpRkEnEIOVlW.jpg",
+    "title": "The Uncanny Counter",
+    "overview": "A group of supernatural demon hunters known as \"Counters,\" each with unique abilities, disguise themselves as employees of a noodle restaurant, while tracking down evil spirits that terrorize the mortal world.",
+    "rating": 8.3
+  },
+  "dharma premikudu (2011)_2010": {
+    "poster_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiB2aWV3Qm94PSIwIDAgMzAwIDQ1MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFhMWEyNCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzEyMTIxOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYTBhMGQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJlZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRTUwOTE0Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2IyMDcxMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNiZykiLz4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxODAiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNikiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE4MCIgcj0iNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNyZWQpIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuODUiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjIwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIG9wYWNpdHk9IjAuOTUiPkQ8L3RleHQ+CiAgPHJlY3QgeD0iMjUiIHk9IjMyMCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyIiBmaWxsPSJ1cmwoI3JlZCkiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjM1OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkRoYXJtYSBQcmVtaWt1ZHUgKDIwLi4uPC90ZXh0PgogIDx0ZXh0IHg9IjE1MCIgeT0iMzg4IiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzgwODA4OCIgbGV0dGVyLXNwYWNpbmc9IjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNUUkVBTUlORyBQTEFURk9STTwvdGV4dD4KPC9zdmc+",
+    "backdrop_url": "",
+    "title": "Dharma Premikudu (2011)",
+    "overview": "",
+    "rating": 7.5
+  },
+  "the age of shadows_2016": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/kHiBkgmMY8QJQo2r5yXRhJ7P7k.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/5IkEziMnignLFxbxuYqrQGBxdWY.jpg",
+    "title": "The Age of Shadows",
+    "overview": "Set in the late 1920s, The Age of Shadows follows the cat-and-mouse game that unfolds between a group of resistance fighters trying to bring in explosives from Shanghai to destroy key Japanese facilities in Seoul, and Japanese agents trying to stop them.",
+    "rating": 7.2
+  },
+  "garuda rani: saga (2021)_2025": {
+    "poster_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiB2aWV3Qm94PSIwIDAgMzAwIDQ1MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFhMWEyNCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzEyMTIxOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYTBhMGQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJlZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRTUwOTE0Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2IyMDcxMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNiZykiLz4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxODAiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNikiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE4MCIgcj0iNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNyZWQpIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuODUiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjIwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIG9wYWNpdHk9IjAuOTUiPkc8L3RleHQ+CiAgPHJlY3QgeD0iMjUiIHk9IjMyMCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyIiBmaWxsPSJ1cmwoI3JlZCkiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjM1OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkdhcnVkYSBSYW5pOiBTYWdhICgyLi4uPC90ZXh0PgogIDx0ZXh0IHg9IjE1MCIgeT0iMzg4IiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzgwODA4OCIgbGV0dGVyLXNwYWNpbmc9IjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNUUkVBTUlORyBQTEFURk9STTwvdGV4dD4KPC9zdmc+",
+    "backdrop_url": "",
+    "title": "Garuda Rani: Saga (2021)",
+    "overview": "",
+    "rating": 7.5
+  },
+  "sky tour: the movie_2020": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/m4OSUU8cTNrV4JdaX4lZfRbrP8w.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/bZa7rxRKj86KJVHw5KE6S7CkaNd.jpg",
+    "title": "Sky Tour: The Movie",
+    "overview": "From the preparations to the performances, this documentary showcases Vietnamese pop idol Sơn Tùng M-TP and the passion behind his Sky Tour concerts.",
+    "rating": 3.0
+  },
+  "dard jung (2000)_1978": {
+    "poster_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiB2aWV3Qm94PSIwIDAgMzAwIDQ1MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFhMWEyNCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzEyMTIxOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYTBhMGQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJlZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRTUwOTE0Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2IyMDcxMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNiZykiLz4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxODAiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNikiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE4MCIgcj0iNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNyZWQpIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuODUiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjIwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIG9wYWNpdHk9IjAuOTUiPkQ8L3RleHQ+CiAgPHJlY3QgeD0iMjUiIHk9IjMyMCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyIiBmaWxsPSJ1cmwoI3JlZCkiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjM1OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkRhcmQgSnVuZyAoMjAwMCk8L3RleHQ+CiAgPHRleHQgeD0iMTUwIiB5PSIzODgiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjODA4MDg4IiBsZXR0ZXItc3BhY2luZz0iMiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+U1RSRUFNSU5HIFBMQVRGT1JNPC90ZXh0Pgo8L3N2Zz4=",
+    "backdrop_url": "",
+    "title": "Dard Jung (2000)",
+    "overview": "",
+    "rating": 7.5
+  },
+  "neo samurai (2012)_2015": {
+    "poster_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiB2aWV3Qm94PSIwIDAgMzAwIDQ1MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFhMWEyNCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzEyMTIxOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYTBhMGQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJlZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRTUwOTE0Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2IyMDcxMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNiZykiLz4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxODAiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNikiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE4MCIgcj0iNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNyZWQpIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuODUiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjIwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIG9wYWNpdHk9IjAuOTUiPk48L3RleHQ+CiAgPHJlY3QgeD0iMjUiIHk9IjMyMCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyIiBmaWxsPSJ1cmwoI3JlZCkiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjM1OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPk5lbyBTYW11cmFpICgyMDEyKTwvdGV4dD4KICA8dGV4dCB4PSIxNTAiIHk9IjM4OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiM4MDgwODgiIGxldHRlci1zcGFjaW5nPSIyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5TVFJFQU1JTkcgUExBVEZPUk08L3RleHQ+Cjwvc3ZnPg==",
+    "backdrop_url": "",
+    "title": "Neo Samurai (2012)",
+    "overview": "",
+    "rating": 7.5
+  },
+  "raja vettai (2007)_1975": {
+    "poster_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiB2aWV3Qm94PSIwIDAgMzAwIDQ1MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFhMWEyNCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzEyMTIxOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYTBhMGQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJlZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRTUwOTE0Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2IyMDcxMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNiZykiLz4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxODAiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNikiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE4MCIgcj0iNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNyZWQpIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuODUiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjIwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIG9wYWNpdHk9IjAuOTUiPlI8L3RleHQ+CiAgPHJlY3QgeD0iMjUiIHk9IjMyMCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyIiBmaWxsPSJ1cmwoI3JlZCkiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjM1OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlJhamEgVmV0dGFpICgyMDA3KTwvdGV4dD4KICA8dGV4dCB4PSIxNTAiIHk9IjM4OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiM4MDgwODgiIGxldHRlci1zcGFjaW5nPSIyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5TVFJFQU1JTkcgUExBVEZPUk08L3RleHQ+Cjwvc3ZnPg==",
+    "backdrop_url": "",
+    "title": "Raja Vettai (2007)",
+    "overview": "",
+    "rating": 7.5
+  },
+  "madha boomi (2003)_2022": {
+    "poster_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiB2aWV3Qm94PSIwIDAgMzAwIDQ1MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFhMWEyNCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzEyMTIxOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYTBhMGQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJlZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRTUwOTE0Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2IyMDcxMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNiZykiLz4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxODAiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNikiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE4MCIgcj0iNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNyZWQpIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuODUiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjIwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIG9wYWNpdHk9IjAuOTUiPk08L3RleHQ+CiAgPHJlY3QgeD0iMjUiIHk9IjMyMCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyIiBmaWxsPSJ1cmwoI3JlZCkiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjM1OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPk1hZGhhIEJvb21pICgyMDAzKTwvdGV4dD4KICA8dGV4dCB4PSIxNTAiIHk9IjM4OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiM4MDgwODgiIGxldHRlci1zcGFjaW5nPSIyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5TVFJFQU1JTkcgUExBVEZPUk08L3RleHQ+Cjwvc3ZnPg==",
+    "backdrop_url": "",
+    "title": "Madha Boomi (2003)",
+    "overview": "",
+    "rating": 7.5
+  },
+  "kondaveeti pranam (2024)_2011": {
+    "poster_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiB2aWV3Qm94PSIwIDAgMzAwIDQ1MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFhMWEyNCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzEyMTIxOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYTBhMGQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJlZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRTUwOTE0Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2IyMDcxMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNiZykiLz4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxODAiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNikiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE4MCIgcj0iNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNyZWQpIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuODUiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjIwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIG9wYWNpdHk9IjAuOTUiPks8L3RleHQ+CiAgPHJlY3QgeD0iMjUiIHk9IjMyMCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyIiBmaWxsPSJ1cmwoI3JlZCkiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjM1OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPktvbmRhdmVldGkgUHJhbmFtICgyLi4uPC90ZXh0PgogIDx0ZXh0IHg9IjE1MCIgeT0iMzg4IiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzgwODA4OCIgbGV0dGVyLXNwYWNpbmc9IjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNUUkVBTUlORyBQTEFURk9STTwvdGV4dD4KPC9zdmc+",
+    "backdrop_url": "",
+    "title": "Kondaveeti Pranam (2024)",
+    "overview": "",
+    "rating": 7.5
+  },
+  "thala kavalan (2014)_2011": {
+    "poster_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiB2aWV3Qm94PSIwIDAgMzAwIDQ1MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFhMWEyNCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzEyMTIxOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYTBhMGQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJlZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRTUwOTE0Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2IyMDcxMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNiZykiLz4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxODAiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNikiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE4MCIgcj0iNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNyZWQpIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuODUiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjIwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIG9wYWNpdHk9IjAuOTUiPlQ8L3RleHQ+CiAgPHJlY3QgeD0iMjUiIHk9IjMyMCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyIiBmaWxsPSJ1cmwoI3JlZCkiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjM1OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlRoYWxhIEthdmFsYW4gKDIwMTQpPC90ZXh0PgogIDx0ZXh0IHg9IjE1MCIgeT0iMzg4IiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzgwODA4OCIgbGV0dGVyLXNwYWNpbmc9IjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNUUkVBTUlORyBQTEFURk9STTwvdGV4dD4KPC9zdmc+",
+    "backdrop_url": "",
+    "title": "Thala Kavalan (2014)",
+    "overview": "",
+    "rating": 7.5
+  },
+  "veer dosti: reloaded (1991)_1987": {
+    "poster_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiB2aWV3Qm94PSIwIDAgMzAwIDQ1MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFhMWEyNCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzEyMTIxOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYTBhMGQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJlZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRTUwOTE0Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2IyMDcxMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNiZykiLz4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxODAiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNikiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE4MCIgcj0iNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNyZWQpIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuODUiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjIwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIG9wYWNpdHk9IjAuOTUiPlY8L3RleHQ+CiAgPHJlY3QgeD0iMjUiIHk9IjMyMCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyIiBmaWxsPSJ1cmwoI3JlZCkiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjM1OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlZlZXIgRG9zdGk6IFJlbG9hZGVkLi4uPC90ZXh0PgogIDx0ZXh0IHg9IjE1MCIgeT0iMzg4IiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzgwODA4OCIgbGV0dGVyLXNwYWNpbmc9IjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNUUkVBTUlORyBQTEFURk9STTwvdGV4dD4KPC9zdmc+",
+    "backdrop_url": "",
+    "title": "Veer Dosti: Reloaded (1991)",
+    "overview": "",
+    "rating": 7.5
+  },
+  "dharma samrat: the fighter (1993)_2013": {
+    "poster_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiB2aWV3Qm94PSIwIDAgMzAwIDQ1MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFhMWEyNCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzEyMTIxOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYTBhMGQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJlZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRTUwOTE0Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2IyMDcxMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNiZykiLz4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxODAiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNikiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE4MCIgcj0iNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNyZWQpIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuODUiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjIwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIG9wYWNpdHk9IjAuOTUiPkQ8L3RleHQ+CiAgPHJlY3QgeD0iMjUiIHk9IjMyMCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyIiBmaWxsPSJ1cmwoI3JlZCkiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjM1OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkRoYXJtYSBTYW1yYXQ6IFRoZSBGLi4uPC90ZXh0PgogIDx0ZXh0IHg9IjE1MCIgeT0iMzg4IiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzgwODA4OCIgbGV0dGVyLXNwYWNpbmc9IjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNUUkVBTUlORyBQTEFURk9STTwvdGV4dD4KPC9zdmc+",
+    "backdrop_url": "",
+    "title": "Dharma Samrat: The Fighter (1993)",
+    "overview": "",
+    "rating": 7.5
+  },
+  "shandaar katha: mission (1996)_2003": {
+    "poster_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiB2aWV3Qm94PSIwIDAgMzAwIDQ1MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFhMWEyNCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzEyMTIxOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYTBhMGQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJlZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRTUwOTE0Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2IyMDcxMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNiZykiLz4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxODAiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNikiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE4MCIgcj0iNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNyZWQpIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuODUiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjIwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIG9wYWNpdHk9IjAuOTUiPlM8L3RleHQ+CiAgPHJlY3QgeD0iMjUiIHk9IjMyMCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyIiBmaWxsPSJ1cmwoI3JlZCkiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjM1OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNoYW5kYWFyIEthdGhhOiBNaXNzLi4uPC90ZXh0PgogIDx0ZXh0IHg9IjE1MCIgeT0iMzg4IiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzgwODA4OCIgbGV0dGVyLXNwYWNpbmc9IjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNUUkVBTUlORyBQTEFURk9STTwvdGV4dD4KPC9zdmc+",
+    "backdrop_url": "",
+    "title": "Shandaar Katha: Mission (1996)",
+    "overview": "",
+    "rating": 7.5
+  },
+  "garuda kavacham: the legend (1992)_2005": {
+    "poster_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiB2aWV3Qm94PSIwIDAgMzAwIDQ1MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFhMWEyNCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzEyMTIxOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYTBhMGQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJlZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRTUwOTE0Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2IyMDcxMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNiZykiLz4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxODAiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNikiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE4MCIgcj0iNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNyZWQpIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuODUiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjIwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIG9wYWNpdHk9IjAuOTUiPkc8L3RleHQ+CiAgPHJlY3QgeD0iMjUiIHk9IjMyMCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyIiBmaWxsPSJ1cmwoI3JlZCkiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjM1OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkdhcnVkYSBLYXZhY2hhbTogVGhlLi4uPC90ZXh0PgogIDx0ZXh0IHg9IjE1MCIgeT0iMzg4IiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzgwODA4OCIgbGV0dGVyLXNwYWNpbmc9IjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNUUkVBTUlORyBQTEFURk9STTwvdGV4dD4KPC9zdmc+",
+    "backdrop_url": "",
+    "title": "Garuda Kavacham: The Legend (1992)",
+    "overview": "",
+    "rating": 7.5
+  },
+  "chaitanya simham: king_2022": {
+    "poster_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiB2aWV3Qm94PSIwIDAgMzAwIDQ1MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFhMWEyNCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzEyMTIxOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYTBhMGQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJlZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRTUwOTE0Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2IyMDcxMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNiZykiLz4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxODAiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNikiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE4MCIgcj0iNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNyZWQpIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuODUiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjIwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIG9wYWNpdHk9IjAuOTUiPkM8L3RleHQ+CiAgPHJlY3QgeD0iMjUiIHk9IjMyMCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyIiBmaWxsPSJ1cmwoI3JlZCkiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjM1OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkNoYWl0YW55YSBTaW1oYW06IEtpLi4uPC90ZXh0PgogIDx0ZXh0IHg9IjE1MCIgeT0iMzg4IiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzgwODA4OCIgbGV0dGVyLXNwYWNpbmc9IjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNUUkVBTUlORyBQTEFURk9STTwvdGV4dD4KPC9zdmc+",
+    "backdrop_url": "",
+    "title": "Chaitanya Simham: King",
+    "overview": "",
+    "rating": 7.5
+  },
+  "silent code: origins_2020": {
+    "poster_url": "https://image.tmdb.org/t/p/w500/8kYGwQqDacIgABHTxKtmoLo6CSn.jpg",
+    "backdrop_url": "https://image.tmdb.org/t/p/original/w3Ogt81UDjPwYbce9P03wKc5pzt.jpg",
+    "title": "Silent Code: Origins",
+    "overview": "A journalist, tasked with monitoring online message boards for potential news stories, becomes involved in a hacking scandal.",
+    "rating": 3.5
+  },
+  "shandaar katha: chapter 1_2024": {
+    "poster_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiB2aWV3Qm94PSIwIDAgMzAwIDQ1MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFhMWEyNCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzEyMTIxOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYTBhMGQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJlZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRTUwOTE0Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2IyMDcxMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNiZykiLz4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxODAiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNikiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE4MCIgcj0iNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNyZWQpIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuODUiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjIwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIG9wYWNpdHk9IjAuOTUiPlM8L3RleHQ+CiAgPHJlY3QgeD0iMjUiIHk9IjMyMCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyIiBmaWxsPSJ1cmwoI3JlZCkiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjM1OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNoYW5kYWFyIEthdGhhOiBDaGFwLi4uPC90ZXh0PgogIDx0ZXh0IHg9IjE1MCIgeT0iMzg4IiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzgwODA4OCIgbGV0dGVyLXNwYWNpbmc9IjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNUUkVBTUlORyBQTEFURk9STTwvdGV4dD4KPC9zdmc+",
+    "backdrop_url": "",
+    "title": "Shandaar Katha: Chapter 1",
+    "overview": "",
+    "rating": 7.5
+  },
+  "kadal perumaal: chapter (2016)_1995": {
+    "poster_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiB2aWV3Qm94PSIwIDAgMzAwIDQ1MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFhMWEyNCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzEyMTIxOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYTBhMGQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJlZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRTUwOTE0Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2IyMDcxMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNiZykiLz4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxODAiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNikiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE4MCIgcj0iNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNyZWQpIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuODUiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjIwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIG9wYWNpdHk9IjAuOTUiPks8L3RleHQ+CiAgPHJlY3QgeD0iMjUiIHk9IjMyMCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyIiBmaWxsPSJ1cmwoI3JlZCkiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjM1OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkthZGFsIFBlcnVtYWFsOiBDaGFwLi4uPC90ZXh0PgogIDx0ZXh0IHg9IjE1MCIgeT0iMzg4IiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzgwODA4OCIgbGV0dGVyLXNwYWNpbmc9IjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNUUkVBTUlORyBQTEFURk9STTwvdGV4dD4KPC9zdmc+",
+    "backdrop_url": "",
+    "title": "Kadal Perumaal: Chapter (2016)",
+    "overview": "",
+    "rating": 7.5
+  },
+  "vijayanagara kavacham: returns_2010": {
+    "poster_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiB2aWV3Qm94PSIwIDAgMzAwIDQ1MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFhMWEyNCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzEyMTIxOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYTBhMGQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJlZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRTUwOTE0Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2IyMDcxMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNiZykiLz4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxODAiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNikiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE4MCIgcj0iNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNyZWQpIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuODUiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjIwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIG9wYWNpdHk9IjAuOTUiPlY8L3RleHQ+CiAgPHJlY3QgeD0iMjUiIHk9IjMyMCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyIiBmaWxsPSJ1cmwoI3JlZCkiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjM1OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlZpamF5YW5hZ2FyYSBLYXZhY2hhLi4uPC90ZXh0PgogIDx0ZXh0IHg9IjE1MCIgeT0iMzg4IiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzgwODA4OCIgbGV0dGVyLXNwYWNpbmc9IjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNUUkVBTUlORyBQTEFURk9STTwvdGV4dD4KPC9zdmc+",
+    "backdrop_url": "",
+    "title": "Vijayanagara Kavacham: Returns",
+    "overview": "",
+    "rating": 7.5
+  },
+  "dharma veerudu (2014)_2016": {
+    "poster_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiB2aWV3Qm94PSIwIDAgMzAwIDQ1MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFhMWEyNCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzEyMTIxOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYTBhMGQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJlZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRTUwOTE0Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2IyMDcxMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNiZykiLz4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxODAiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNikiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE4MCIgcj0iNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNyZWQpIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuODUiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjIwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIG9wYWNpdHk9IjAuOTUiPkQ8L3RleHQ+CiAgPHJlY3QgeD0iMjUiIHk9IjMyMCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyIiBmaWxsPSJ1cmwoI3JlZCkiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjM1OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkRoYXJtYSBWZWVydWR1ICgyMDE0Li4uPC90ZXh0PgogIDx0ZXh0IHg9IjE1MCIgeT0iMzg4IiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzgwODA4OCIgbGV0dGVyLXNwYWNpbmc9IjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNUUkVBTUlORyBQTEFURk9STTwvdGV4dD4KPC9zdmc+",
+    "backdrop_url": "",
+    "title": "Dharma Veerudu (2014)",
+    "overview": "",
+    "rating": 7.5
+  },
+  "azad aashiqui (2016)_1997": {
+    "poster_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiB2aWV3Qm94PSIwIDAgMzAwIDQ1MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFhMWEyNCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzEyMTIxOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYTBhMGQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJlZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRTUwOTE0Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2IyMDcxMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNiZykiLz4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxODAiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNikiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE4MCIgcj0iNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNyZWQpIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuODUiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjIwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIG9wYWNpdHk9IjAuOTUiPkE8L3RleHQ+CiAgPHJlY3QgeD0iMjUiIHk9IjMyMCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyIiBmaWxsPSJ1cmwoI3JlZCkiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjM1OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkF6YWQgQWFzaGlxdWkgKDIwMTYpPC90ZXh0PgogIDx0ZXh0IHg9IjE1MCIgeT0iMzg4IiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzgwODA4OCIgbGV0dGVyLXNwYWNpbmc9IjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNUUkVBTUlORyBQTEFURk9STTwvdGV4dD4KPC9zdmc+",
+    "backdrop_url": "",
+    "title": "Azad Aashiqui (2016)",
+    "overview": "",
+    "rating": 7.5
+  },
+  "kondaveeti simham: unlimited (2013)_1999": {
+    "poster_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiB2aWV3Qm94PSIwIDAgMzAwIDQ1MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFhMWEyNCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzEyMTIxOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYTBhMGQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJlZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRTUwOTE0Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2IyMDcxMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNiZykiLz4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxODAiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNikiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE4MCIgcj0iNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNyZWQpIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuODUiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjIwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTQiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIG9wYWNpdHk9IjAuOTUiPks8L3RleHQ+CiAgPHJlY3QgeD0iMjUiIHk9IjMyMCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyIiBmaWxsPSJ1cmwoI3JlZCkiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjM1OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPktvbmRhdmVldGkgU2ltaGFtOiBVLi4uPC90ZXh0PgogIDx0ZXh0IHg9IjE1MCIgeT0iMzg4IiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzgwODA4OCIgbGV0dGVyLXNwYWNpbmc9IjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNUUkVBTUlORyBQTEFURk9STTwvdGV4dD4KPC9zdmc+",
+    "backdrop_url": "",
+    "title": "Kondaveeti Simham: Unlimited (2013)",
+    "overview": "",
+    "rating": 7.5
   }
 }
