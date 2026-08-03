@@ -131,37 +131,38 @@ def fetch_poster(title: str, year: int = None) -> str:
     return fetch_tmdb_poster_url(title, year)
 
 
-from concurrent.futures import ThreadPoolExecutor
-
 def get_movie_poster(m: dict) -> str:
-    """Get valid poster URL, fetching from TMDB/OMDb API if missing or 'nan'."""
+    """Get valid poster URL from dict or POSTER_CACHE instantly."""
     if not m:
         return ""
-    raw_p = str(m.get("poster_url") or "").strip()
+    raw_p = str(m.get("poster_url") or m.get("poster") or "").strip()
     if raw_p and raw_p.lower() not in ["nan", "none", "null"] and raw_p.startswith("http"):
         return raw_p
-    p_url = fetch_poster(m.get("title"), m.get("release_year"))
+
+    title = str(m.get("title") or "").strip()
+    year = m.get("release_year")
+    cache_key = f"{title.lower()}_{year if year else ''}"
+
+    if cache_key in POSTER_CACHE and POSTER_CACHE[cache_key]:
+        val = POSTER_CACHE[cache_key]
+        p_url = val.get("poster_url", "") if isinstance(val, dict) else str(val)
+        if p_url:
+            m["poster"] = p_url
+            m["poster_url"] = p_url
+            return p_url
+
+    p_url = fetch_poster(title, year)
+    m["poster"] = p_url
     m["poster_url"] = p_url
     return p_url
 
 def hydrate_posters(movie_list: list) -> list:
-    """Ensure every movie dict in a list has a valid poster URL populated in parallel."""
+    """Ensure every movie dict in a list has a valid poster URL populated instantly."""
     if not movie_list:
         return movie_list
 
-    # Identify movies needing poster fetch
-    to_fetch = [m for m in movie_list if not (str(m.get("poster_url") or "").strip().startswith("http"))]
-
-    if to_fetch:
-        with ThreadPoolExecutor(max_workers=min(20, len(to_fetch))) as executor:
-            fetched_urls = list(executor.map(get_movie_poster, to_fetch))
-            for m, p_url in zip(to_fetch, fetched_urls):
-                m["poster"] = p_url
-                m["poster_url"] = p_url
-
     for m in movie_list:
-        if "poster" not in m or not m["poster"]:
-            m["poster"] = get_movie_poster(m)
+        m["poster"] = get_movie_poster(m)
 
     return movie_list
 

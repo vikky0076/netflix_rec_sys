@@ -5,6 +5,15 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ── 0. Cinematic Netflix Opening Splash Screen ──────────────
+  const splash = document.getElementById('netflixSplash');
+  if (splash) {
+    setTimeout(() => {
+      splash.classList.add('fade-out');
+      setTimeout(() => splash.remove(), 850);
+    }, 1650);
+  }
+
   // ── 1. Scroll-Aware Navbar ──────────────────────────────────
   const nav = document.querySelector('.stream-nav');
   if (nav) {
@@ -35,6 +44,24 @@ document.addEventListener('DOMContentLoaded', () => {
       const activePill = document.querySelector('.filter-pill.active');
       return activePill ? activePill.dataset.lang || 'All' : 'All';
     };
+
+    const iconBtns = wrapper.querySelectorAll('.search-icon-btn, .search-icon');
+    iconBtns.forEach(iconBtn => {
+      iconBtn.addEventListener('click', (e) => {
+        const q = searchInput.value.trim();
+        if (!q) {
+          e.preventDefault();
+          searchInput.focus();
+        } else {
+          const form = searchInput.closest('form');
+          if (form) {
+            const overlay = document.querySelector('.loading-overlay');
+            if (overlay) overlay.classList.remove('hidden');
+            form.submit();
+          }
+        }
+      });
+    });
 
     searchInput.addEventListener('input', () => {
       clearTimeout(debounceTimer);

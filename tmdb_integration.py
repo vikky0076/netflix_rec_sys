@@ -109,8 +109,8 @@ def generate_svg_placeholder(title: str) -> str:
 
 def fetch_tmdb_details(title: str, year: int = None) -> dict:
     """
-    Search TMDB API & OMDb API for a movie by Title and optional Release Year.
-    Checks dataset/poster_cache.json first.
+    Search TMDB API for a movie by Title and optional Release Year.
+    Checks dataset/poster_cache.json first for instant O(1) returns.
     """
     if not title:
         return {"poster_url": generate_svg_placeholder("Movie"), "backdrop_url": ""}
@@ -118,54 +118,41 @@ def fetch_tmdb_details(title: str, year: int = None) -> dict:
     cache_key = f"{clean_t.lower()}_{year if year else ''}"
 
     tmdb_key = parse_api_key(os.getenv("TMDB_API_KEY", ""), "api_key")
-    omdb_key = parse_api_key(os.getenv("OMDB_API_KEY", ""), "apikey")
 
-    # Step 1: Check local disk cache (only return if poster_url is a real image URL, not SVG or mock broken URL)
+    # Step 1: Instant Local Cache Return
     if cache_key in POSTER_CACHE and POSTER_CACHE[cache_key]:
         val = POSTER_CACHE[cache_key]
-        cached_poster = ""
         if isinstance(val, dict):
-            cached_poster = val.get("poster_url", "")
-        elif isinstance(val, str):
-            cached_poster = val
-
-        is_svg = cached_poster.startswith("data:image/svg+xml")
-        is_dummy_mock = any(cached_poster.endswith(x) for x in ["pushpa.jpg", "pushpa2.jpg", "manjummel.jpg", "premalu.jpg", "aavesham.jpg", "kgf1.jpg", "kgf2.jpg", "kantara.jpg", "dangal.jpg", "3idiots.jpg", "12thfail.jpg", "baahubali.jpg"])
-
-        if cached_poster and cached_poster.startswith("http") and not is_svg and not is_dummy_mock:
-            if isinstance(val, dict):
-                return val
-            else:
-                return {"poster_url": cached_poster, "backdrop_url": ""}
+            return val
+        elif isinstance(val, str) and val:
+            return {"poster_url": val, "backdrop_url": ""}
 
     fetched_poster = None
     fetched_backdrop = ""
     fetched_overview = ""
     fetched_rating = 7.5
 
-    # Step 2: TMDB API Lookup
+    # Step 2: TMDB API Lookup with Fast 0.8s Timeout & Title Sanitization
     if tmdb_key:
         try:
-            params = {"api_key": tmdb_key, "query": clean_t}
+            # Sanitize search query: strip parenthetical years like "(2020)" and season markers
+            search_query = re.sub(r'\s*\(\d{4}\)', '', clean_t).split(':')[0].split('-')[0].strip()
+            params = {"api_key": tmdb_key, "query": search_query}
             if year and int(year) > 1900:
                 params["year"] = int(year)
 
-            resp = requests.get(f"{TMDB_BASE}/search/movie", params=params, timeout=2.5)
+            resp = requests.get(f"{TMDB_BASE}/search/movie", params=params, timeout=0.8)
             results = resp.json().get("results", [])
 
-            if not results:
-                resp = requests.get(f"{TMDB_BASE}/search/tv", params=params, timeout=2.5)
+            # Fallback without year if specified year yielded 0 results
+            if not results and "year" in params:
+                del params["year"]
+                resp = requests.get(f"{TMDB_BASE}/search/movie", params=params, timeout=0.8)
                 results = resp.json().get("results", [])
 
-            # Fallback with sanitized title (stripping parenthetical year / subtitle)
             if not results:
-                clean_query = re.sub(r'\s*\(\d{4}\)', '', clean_t).split(':')[0].strip()
-                if clean_query and clean_query != clean_t:
-                    resp = requests.get(f"{TMDB_BASE}/search/movie", params={"api_key": tmdb_key, "query": clean_query}, timeout=2.5)
-                    results = resp.json().get("results", [])
-                    if not results:
-                        resp = requests.get(f"{TMDB_BASE}/search/tv", params={"api_key": tmdb_key, "query": clean_query}, timeout=2.5)
-                        results = resp.json().get("results", [])
+                resp = requests.get(f"{TMDB_BASE}/search/tv", params=params, timeout=0.8)
+                results = resp.json().get("results", [])
 
             if results:
                 match = results[0]
@@ -178,32 +165,10 @@ def fetch_tmdb_details(title: str, year: int = None) -> dict:
                     fetched_backdrop = f"{TMDB_IMG_ORIG}{b_path}"
                 fetched_overview = match.get("overview", "")
                 fetched_rating = round(float(match.get("vote_average", 7.5)), 1)
-        except Exception as e:
-            print(f"[WARNING] TMDB API fetch failed for '{clean_t}': {e}")
+        except Exception:
+            pass
 
-    # Step 3: OMDb API Lookup if TMDB returned no poster
-    if not fetched_poster and omdb_key:
-        try:
-            params = {"apikey": omdb_key, "t": clean_t}
-            if year and int(year) > 1900:
-                params["y"] = int(year)
-
-            resp = requests.get(OMDB_BASE, params=params, timeout=3.5)
-            data = resp.json()
-            if data.get("Response") == "True" and data.get("Poster") and data.get("Poster") != "N/A":
-                fetched_poster = data["Poster"]
-                if not fetched_overview:
-                    fetched_overview = data.get("Plot", "")
-                if data.get("imdbRating") and data["imdbRating"] != "N/A":
-                    try:
-                        fetched_rating = float(data["imdbRating"])
-                    except:
-                        pass
-                print(f"[SUCCESS] OMDb fetched poster for '{clean_t}': {fetched_poster}")
-        except Exception as e:
-            print(f"[WARNING] OMDb API fetch failed for '{clean_t}': {e}")
-
-    # Step 4: Base64 SVG Fallback if both APIs return no poster
+    # Step 3: Base64 SVG Fallback if TMDB returns no poster
     if not fetched_poster:
         fetched_poster = generate_svg_placeholder(clean_t)
 
