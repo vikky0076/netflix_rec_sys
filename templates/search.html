@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Movies — NetFlixREC</title>
+  <meta name="description" content="Search movies, actors, directors, and genres for AI recommendations." />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Premium Streaming CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body class="streaming-theme yt-search-page-body">
+
+  <!-- ── Loading Overlay ────────────────────────────────────── -->
+  <div class="loading-overlay hidden" id="loadingOverlay">
+    <div class="spinner"></div>
+    <p class="loading-text">Personalizing your experience...</p>
+  </div>
+
+  <!-- ── Dedicated YouTube-Style Mobile & Desktop Search Header ────── -->
+  <header class="yt-search-header">
+    <a href="javascript:history.length > 1 ? history.back() : window.location.href='/'" class="yt-back-btn" aria-label="Go back">
+      <i class="bi bi-arrow-left"></i>
+    </a>
+    <form action="/recommend" method="GET" class="yt-search-form" id="ytSearchForm">
+      <input type="hidden" name="lang" value="{{ selected_lang | default('All') }}" />
+      <div class="yt-input-wrapper">
+        <i class="bi bi-search yt-input-search-icon"></i>
+        <input
+          type="text"
+          name="movie"
+          id="ytSearchInput"
+          class="yt-search-input"
+          placeholder="Search movies, actors, directors..."
+          value="{{ query | default('') }}"
+          autocomplete="off"
+          spellcheck="false"
+          autofocus
+          required
+        />
+        <button type="button" class="yt-clear-btn hidden" id="ytClearInputBtn" aria-label="Clear search input">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <button type="submit" class="yt-search-submit-btn" aria-label="Search">
+        <i class="bi bi-search"></i>
+      </button>
+    </form>
+  </header>
+
+  <!-- ── YouTube Search View Content Container ──────────────────────── -->
+  <main class="yt-search-main">
+
+    <!-- 1. Live Instant Autocomplete Results Container (as user types) -->
+    <div class="yt-suggestions-container hidden" id="ytSuggestionsContainer"></div>
+
+    <!-- 2. Recent Search History Section (when input is empty) -->
+    {% if history %}
+    <section class="yt-search-section" id="ytHistorySection">
+      <div class="yt-section-title-wrap">
+        <h2 class="yt-section-title">
+          <i class="bi bi-clock-history"></i> Recent Searches
+        </h2>
+        <button type="button" class="yt-clear-history-btn" id="ytClearHistoryBtn">
+          Clear all
+        </button>
+      </div>
+      <ul class="yt-history-list">
+        {% for item in history %}
+        <li class="yt-history-item">
+          <a href="/recommend?movie={{ item | urlencode }}" class="yt-history-link">
+            <i class="bi bi-clock-history yt-hist-icon"></i>
+            <span class="yt-hist-text">{{ item }}</span>
+          </a>
+          <button type="button" class="yt-hist-fill-btn" data-query="{{ item }}" title="Fill search box" aria-label="Fill search box">
+            <i class="bi bi-arrow-up-left"></i>
+          </button>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+
+    <!-- 3. Popular & Trending Searches Section (when input is empty) -->
+    <section class="yt-search-section" id="ytPopularSection">
+      <div class="yt-section-title-wrap">
+        <h2 class="yt-section-title">
+          <i class="bi bi-fire" style="color: var(--netflix-red);"></i> Popular Searches
+        </h2>
+      </div>
+      <div class="yt-popular-chips">
+        {% set popular_queries = [
+          'Baahubali 2', 'Vikram', 'Inception', 'RRR', 'Kantara', 'Money Heist',
+          'Stranger Things', 'Leo', 'Jawan', 'Animal', 'KGF Chapter 2', 'Stree 2',
+          'Breaking Bad', 'The Crown', 'Interstellar', 'Dangal'
+        ] %}
+        {% for p_query in popular_queries %}
+        <a href="/recommend?movie={{ p_query | urlencode }}" class="yt-chip-item">
+          <i class="bi bi-search"></i> {{ p_query }}
+        </a>
+        {% endfor %}
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Fixed Mobile Bottom Navigation Bar ── -->
+  <nav class="mobile-bottom-nav">
+    <a href="/" class="mobile-nav-tab">
+      <i class="bi bi-house-door-fill"></i>
+      <span>Home</span>
+    </a>
+    <button type="button" class="mobile-nav-tab" id="mobileLangTrigger">
+      <i class="bi bi-globe2"></i>
+      <span>Filter</span>
+    </button>
+    <a href="javascript:location.reload()" class="mobile-nav-tab">
+      <i class="bi bi-arrow-clockwise"></i>
+      <span>Refresh</span>
+    </a>
+  </nav>
+
+  <!-- Scripts -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

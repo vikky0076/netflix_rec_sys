@@ -914,8 +914,9 @@ body.streaming-theme {
   }
 
   .nav-right .home-nav-btn,
-  .nav-right .refresh-btn {
-    display: none;
+  .nav-right .refresh-btn,
+  .nav-right .history-badge-btn {
+    display: none !important;
   }
 
   .genre-filter-bar {
@@ -989,3 +990,301 @@ body.streaming-theme {
   .splash-logo { font-size: 2.6rem; letter-spacing: 4px; }
   .splash-tagline { font-size: 0.7rem; letter-spacing: 3px; }
 }
+
+/* ─────────────────────────────────────────────────────────────
+   YouTube-Style Mobile & Desktop Search Page CSS
+   ───────────────────────────────────────────────────────────── */
+body.yt-search-page-body {
+  background-color: #0f0f10;
+  padding-bottom: 70px;
+}
+
+.yt-search-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 60px;
+  z-index: 10000;
+  background: rgba(15, 15, 16, 0.98);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 10px;
+}
+
+.yt-back-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.35rem;
+  text-decoration: none;
+  transition: var(--transition);
+  background: rgba(255, 255, 255, 0.05);
+  flex-shrink: 0;
+}
+.yt-back-btn:hover, .yt-back-btn:active {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--netflix-red);
+}
+
+.yt-search-form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.yt-input-wrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.yt-input-search-icon {
+  position: absolute;
+  left: 14px;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+.yt-search-input {
+  width: 100%;
+  height: 42px;
+  padding: 0 40px 0 42px;
+  background: #1f1f24;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-pill);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: var(--transition);
+}
+.yt-search-input:focus {
+  outline: none;
+  background: #27272e;
+  border-color: var(--netflix-red);
+  box-shadow: 0 0 15px rgba(229, 9, 20, 0.3);
+}
+
+.yt-clear-btn {
+  position: absolute;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+.yt-clear-btn:hover {
+  color: #ffffff;
+}
+
+.yt-search-submit-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--netflix-red);
+  border: none;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+.yt-search-submit-btn:hover, .yt-search-submit-btn:active {
+  background: var(--netflix-red-hover);
+  transform: scale(1.05);
+}
+
+.yt-search-main {
+  padding-top: 72px;
+  padding-left: 16px;
+  padding-right: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.yt-search-section {
+  margin-bottom: 28px;
+}
+
+.yt-section-title-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.yt-section-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.yt-clear-history-btn {
+  background: transparent;
+  border: none;
+  color: var(--netflix-red);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.yt-clear-history-btn:hover {
+  background: rgba(229, 9, 20, 0.1);
+}
+
+.yt-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.yt-history-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+.yt-history-item:hover, .yt-history-item:active {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.yt-history-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #e1e1e6;
+  text-decoration: none;
+  flex: 1;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.yt-hist-icon {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.yt-hist-fill-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+.yt-hist-fill-btn:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.yt-popular-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.yt-chip-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-pill);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+.yt-chip-item:hover, .yt-chip-item:active {
+  background: var(--netflix-red);
+  border-color: var(--netflix-red);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4);
+}
+
+.yt-suggestions-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 24px;
+}
+
+.yt-suggestion-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: var(--transition);
+}
+.yt-suggestion-item:hover, .yt-suggestion-item:active {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(229, 9, 20, 0.4);
+  transform: translateX(4px);
+}
+
+.yt-sug-thumb {
+  width: 48px;
+  height: 68px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.yt-sug-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.yt-sug-title {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.yt-sug-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+

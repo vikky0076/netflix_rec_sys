@@ -223,6 +223,20 @@ def index():
     )
 
 
+@app.route("/search")
+def search_page():
+    """Dedicated YouTube-style mobile & desktop search page."""
+    lang_filter = request.args.get("lang", "All").strip()
+    query = request.args.get("q", "").strip()
+    history = get_user_history()
+    return render_template(
+        "search.html",
+        query=query,
+        history=history,
+        selected_lang=lang_filter
+    )
+
+
 @app.route("/recommend")
 def recommend():
     """Results page: Recommendations for searched movie with history context & filters."""
@@ -421,4 +435,4 @@ def api_history():
 if __name__ == "__main__":
     print("\n[INFO] Starting Flask server at http://127.0.0.1:5000")
     print("[INFO] Press Ctrl+C to stop.\n")
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    app.run(debug=True, use_reloader=False, host="0.0.0.0", port=5000)

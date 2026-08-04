@@ -251,4 +251,139 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ── 7. YouTube-Style Mobile Search Interception & Search Page Logic ──
+  const isMobile = () => window.innerWidth <= 768 || ('ontouchstart' in window);
+  const isSearchPage = window.location.pathname.startsWith('/search');
+
+  // Intercept touch/focus on regular search inputs when on mobile devices
+  if (!isSearchPage) {
+    const navbarSearchInputs = document.querySelectorAll('.search-input');
+    navbarSearchInputs.forEach(input => {
+      ['focus', 'click', 'touchstart'].forEach(evtType => {
+        input.addEventListener(evtType, (e) => {
+          if (isMobile()) {
+            e.preventDefault();
+            window.location.href = '/search';
+          }
+        });
+      });
+    });
+  }
+
+  // YouTube Search Page Real-Time Search & Interactivity
+  const ytSearchInput = document.getElementById('ytSearchInput');
+  const ytClearInputBtn = document.getElementById('ytClearInputBtn');
+  const ytHistorySection = document.getElementById('ytHistorySection');
+  const ytPopularSection = document.getElementById('ytPopularSection');
+  const ytSuggestionsContainer = document.getElementById('ytSuggestionsContainer');
+  const ytClearHistoryBtn = document.getElementById('ytClearHistoryBtn');
+
+  if (ytSearchInput) {
+    let ytDebounceTimer;
+
+    const toggleClearBtn = () => {
+      if (ytClearInputBtn) {
+        if (ytSearchInput.value.trim().length > 0) {
+          ytClearInputBtn.classList.remove('hidden');
+        } else {
+          ytClearInputBtn.classList.add('hidden');
+        }
+      }
+    };
+
+    toggleClearBtn();
+
+    ytSearchInput.addEventListener('input', () => {
+      toggleClearBtn();
+      clearTimeout(ytDebounceTimer);
+      const query = ytSearchInput.value.trim();
+
+      if (query.length < 2) {
+        if (ytSuggestionsContainer) ytSuggestionsContainer.classList.add('hidden');
+        if (ytHistorySection) ytHistorySection.classList.remove('hidden');
+        if (ytPopularSection) ytPopularSection.classList.remove('hidden');
+        return;
+      }
+
+      ytDebounceTimer = setTimeout(async () => {
+        try {
+          const res = await fetch(`/api/search?q=${encodeURIComponent(query)}`);
+          const data = await res.json();
+
+          if (!data || !data.length) {
+            if (ytSuggestionsContainer) {
+              ytSuggestionsContainer.innerHTML = '<div style="padding: 20px; text-align: center; color: var(--text-muted);">No movies found matching search query.</div>';
+              ytSuggestionsContainer.classList.remove('hidden');
+            }
+            if (ytHistorySection) ytHistorySection.classList.add('hidden');
+            if (ytPopularSection) ytPopularSection.classList.add('hidden');
+            return;
+          }
+
+          if (ytSuggestionsContainer) {
+            ytSuggestionsContainer.innerHTML = data.map(m => {
+              const thumbHtml = m.poster
+                ? `<img src="${m.poster}" class="yt-sug-thumb" alt="${m.title}" />`
+                : `<div class="yt-sug-thumb" style="display:flex;align-items:center;justify-content:center;background:#222;font-size:1.4rem;">🎬</div>`;
+
+              return `
+                <a href="/recommend?movie=${encodeURIComponent(m.title)}" class="yt-suggestion-item">
+                  ${thumbHtml}
+                  <div class="yt-sug-details">
+                    <div class="yt-sug-title">${m.title}</div>
+                    <div class="yt-sug-meta">
+                      <span class="lang-badge lang-${m.language.toLowerCase()}">${m.language}</span>
+                      <span>${m.release_year}</span>
+                      <span>⭐ ${m.rating}</span>
+                    </div>
+                  </div>
+                  <i class="bi bi-chevron-right" style="color: var(--text-muted); font-size: 0.9rem;"></i>
+                </a>
+              `;
+            }).join('');
+
+            ytSuggestionsContainer.classList.remove('hidden');
+          }
+
+          if (ytHistorySection) ytHistorySection.classList.add('hidden');
+          if (ytPopularSection) ytPopularSection.classList.add('hidden');
+        } catch (_) {}
+      }, 180);
+    });
+
+    if (ytClearInputBtn) {
+      ytClearInputBtn.addEventListener('click', () => {
+        ytSearchInput.value = '';
+        toggleClearBtn();
+        if (ytSuggestionsContainer) ytSuggestionsContainer.classList.add('hidden');
+        if (ytHistorySection) ytHistorySection.classList.remove('hidden');
+        if (ytPopularSection) ytPopularSection.classList.remove('hidden');
+        ytSearchInput.focus();
+      });
+    }
+
+    // Fill search input buttons
+    document.querySelectorAll('.yt-hist-fill-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const q = btn.dataset.query;
+        if (q) {
+          ytSearchInput.value = q;
+          ytSearchInput.dispatchEvent(new Event('input'));
+          ytSearchInput.focus();
+        }
+      });
+    });
+
+    if (ytClearHistoryBtn) {
+      ytClearHistoryBtn.addEventListener('click', async () => {
+        try {
+          await fetch('/api/history', { method: 'DELETE' });
+          if (ytHistorySection) ytHistorySection.remove();
+        } catch (_) {}
+      });
+    }
+  }
+
 });
